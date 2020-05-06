@@ -1,0 +1,89 @@
+@startuml
+actor user
+collections browser
+collections cas
+collections app1
+collections app2
+
+== First Access to app1 ==
+
+user-> browser: go to app1
+activate browser
+browser->app1:GET http://app.example.com
+activate app1
+app1->browser: 重定向到cas服务器
+deactivate app1
+
+browser->cas: 用户使用密码登录
+activate browser
+activate cas
+cas->browser: 返回登录输入表格
+deactivate cas
+
+browser->cas:输入密码，去cas验证
+activate cas
+cas->cas : cas校验
+cas->browser:set-Cookie: CASTGC="abcde" ticket=ST-12345678
+deactivate cas
+deactivate browser
+
+browser->app1: ticket=ST-12345678
+activate app1
+app1->cas:ticket=ST-12345678
+activate cas
+cas->app1: responseStatus=200
+deactivate cas
+
+app1->browser:set-cookie:JSESSIONID="abc1234567"
+deactivate app1
+
+browser->app1:cookie:JSESSIONID="abc1234567"
+activate app1
+app1->app1:valid cookie
+app1->browser: http返回内容
+deactivate app1
+
+browser->user
+deactivate browser
+
+==Second Access to app1==
+user->browser:request
+activate browser
+browser->app1:cookie:JSESSIONID="abc1234567"
+activate app1
+app1->app1:valid cookie
+app1->browser: 200状态码返回
+deactivate app1
+browser->user:display source
+deactivate browser
+
+
+== First Access to app2 ==
+user->browser:request
+activate browser
+browser->app2
+activate app2
+app2->browser: 重定向到cas
+deactivate app2
+
+browser->cas:cookie: CASTGC="abcde"
+activate cas
+cas->cas:valid ticket
+cas->browser:ticket=ST-345678
+deactivate cas
+browser->app2:ticket=ST-345678
+activate app2
+app2->cas:ticket=ST-345678
+activate cas
+cas->app2: 200 response
+deactivate cas
+app2->browser:set-cookie:"test123"
+deactivate app2
+browser->app2:cookie:"test123"
+activate app2
+app2->app2:valid cookie
+app2->browser:200 response
+deactivate app2
+browser->user:display source
+deactivate browser
+@enduml

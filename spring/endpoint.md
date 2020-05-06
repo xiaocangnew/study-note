@@ -1,0 +1,4 @@
+endPoint接口
+RabbitListenerEndpoint接口
+
+endPoint 和Context接口一样，里面封装了类， 然后具体的类再实现具体的类，还有helper类来实现endPoint

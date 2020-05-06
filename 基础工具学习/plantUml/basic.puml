@@ -1,0 +1,23 @@
+@startuml
+P: Pending for result
+
+N: NO_RESULT_YET
+
+Y: APPROVED
+
+R: REJECTED
+R: KYC check found the applicant's
+R: information not correct
+
+X: EXPIRED
+
+[*] --> N : Card application received
+N --> P : Submitted the KYC check
+P --> Y
+P --> R
+P --> X : Proof of Address (POA) too old
+P --> X : explicitly by KYC
+Y --> [*]
+R --> [*]
+X --> [*]
+@enduml

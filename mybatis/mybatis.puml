@@ -1,0 +1,28 @@
+@startuml
+fac: sqlSessionFactory
+
+session: sqlSession
+
+exe: Executor
+
+statement: statementHandler
+
+para: parameterHandler
+
+res: resultHandler
+
+type: typeHandler
+
+ori : 原生的jdbc
+
+[*] -> fac
+fac -> session
+session -> exe
+exe -> statement
+statement --> res
+statement --> para
+para --> type : 负责java和jdbc数据类型之间的映射和转换
+res --> type
+type --> ori :调用原生
+ori --> [*]
+@enduml

@@ -1,0 +1,33 @@
+@startuml
+start
+:抢占锁;
+if(判断当前线程id是否与mark-word里线程一致) then (一致)
+: 该线程继续持有偏向锁;
+else
+   if(判断偏向锁持有者是否存在) then (存在)
+   :立即查找当前栈贞的线程信息;
+       if(是否需要继续持有锁对象) then (不需要)
+       : 将锁对象状态设为无锁状态，重新偏向新的线程 --> start重新开始;
+       else
+       :暂停当前线程，撤销偏向锁;
+       :复制一份mark-word到当前线程的replaced-mark-word中;
+       :使用CAS把对象头中的内容改为指向当前线程的replaced-mark-word的指针;
+           if(CAS是否替换成功) then (成功)
+           :获取轻量级锁;
+           else
+           :自旋的方式获取轻量级锁;
+              if(自旋次数超过阈值) then (超过)
+              : 升级为重量级锁;
+              : 阻塞所有线程，等待锁释放唤醒;
+              else
+              : 继续自旋;
+              endif
+           endif
+       endif
+   else
+   :锁对象被重置为无锁状态(线程不主动释放偏向锁);
+   :多线程竞争偏向锁(CAS);
+   endif;
+endif;
+stop
+@enduml

@@ -1,0 +1,95 @@
+@startuml
+interface Cache<K, V> {
+V getIfPresent(Object key);
+V get(K key, Callable<? extends V> valueLoader) throws ExecutionException;
+ImmutableMap<K, V> getAllPresent(Iterable<?> keys);
+
+void put(K key, V value);
+void putAll(Map<? extends K,? extends V> m);
+
+void invalidate(Object key);
+void invalidateAll(Iterable<?> keys);
+void invalidateAll();
+
+long size();
+CacheStats stats();
+ConcurrentMap<K, V> asMap();
+void cleanUp();
+}
+
+interface LoadingCache<K, V> extends Cache{
+V get(K key);
+V getUnchecked(K key);
+
+ImmutableMap<K, V> getAll(Iterable<? extends K> keys) throws ExecutionException;
+V apply(K key);
+
+void refresh(K key);
+ConcurrentMap<K, V> asMap();
+}
+
+class LocalManualCache<K, V> implements Cache{
+final LocalCache<K, V> localCache;
+Object writeReplace();
+}
+
+class LocalCache<K, V> extends AbstractMap implements ConcurrentMap{
+}
+
+class LocalLoadingCache<K, V> extends LocalManualCache implements LoadingCache{
+LocalLoadingCache(CacheBuilder builder,CacheLoader loader)
+
+}
+
+abstract class AbstractCache<K, V> implements Cache {
+
+}
+
+abstract class AbstractLoadingCache<K, V> extends AbstractCache implements LoadingCache{
+
+}
+
+abstract class ForwardingLoadingCache<K, V> implements LoadingCache {
+}
+
+abstract class CacheLoader<K, V> {
+
+abstract V load(K key) throws Exception;
+ListenableFuture<V> reload(K key, V oldValue)throws Exception;
+Map<K, V> loadAll(Iterable<? extends K> keys) throws Exception;
+
+static <K, V> CacheLoader<K, V> from(Function<K, V> function) ;
+static <V> CacheLoader<Object, V> from(Supplier<V> supplier);
+static <K, V> CacheLoader<K, V> asyncReloading(final CacheLoader<K, V> loader,final Executor executor) ;
+}
+
+class CacheBuilder<K, V> {
+static CacheBuilder<Object, Object> newBuilder();
+static CacheBuilder<Object, Object> from(CacheBuilderSpec spec);
+static CacheBuilder<Object, Object> from(String spec);
+
+CacheBuilder<K, V> keyEquivalence(Equivalence<Object> equivalence);
+CacheBuilder<K, V> valueEquivalence(Equivalence<Object> equivalence);
+
+CacheBuilder<K, V> initialCapacity(int initialCapacity)
+CacheBuilder<K, V> concurrencyLevel(int concurrencyLevel);
+CacheBuilder<K, V> maximumSize(long size);
+CacheBuilder<K, V> maximumWeight(long weight);
+
+CacheBuilder<K, V> weakKeys();
+CacheBuilder<K, V> weakValues();
+CacheBuilder<K, V> softValues();
+
+CacheBuilder<K, V> expireAfterWrite(long duration, TimeUnit unit);
+CacheBuilder<K, V> expireAfterAccess(long duration, TimeUnit unit);
+CacheBuilder<K, V> refreshAfterWrite(long duration, TimeUnit unit);
+
+CacheBuilder<K, V> ticker(Ticker ticker);
+CacheBuilder<K1, V1> removalListener(RemovalListener<? super K1, ? super V1> listener);
+}
+
+LocalLoadingCache o-- CacheBuilder
+LocalLoadingCache o-- CacheLoader
+LocalManualCache o-- LocalCache
+
+@enduml
