@@ -1,0 +1,11 @@
+@startuml
+controller <-- brokerPath: watch fired
+activate controller
+controller --> brokerPath : read available brokers
+controller -> controller : determine set_p( 该集合包含所有宕机的brokers的所有partitions)
+controller --> brokerState : read ISR for partition in set_p
+controller -> controller : determine new leader and ISR for partition in set_p
+controller --> affectedBrokers : RPC方式发送: 向set_p相关的broker发送LeaderAndISRRequest命令
+deactivate controller
+
+@enduml

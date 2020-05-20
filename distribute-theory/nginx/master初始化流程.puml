@@ -1,0 +1,39 @@
+@startmindmap
+* master初始化流程
+** 命令行参数解析
+** 平滑升级时，则监听环境变量里传递监听句柄
+** nginx_init_cycle初始化流程
+***_ 生成配置项的结构体
+***_ 解析nginx_conf
+***_ 内存空间创建
+****_ 目录空间创建
+****_ 文件空间创建
+****_ 共享空间创建
+****_ 监听数组空间创建
+***_ 调用所有模块init_module方法
+** master进程信号处理
+***_ 注册信号
+***_ 信号处理函数
+** master进程事件循环
+***_ 启动cache_manager进程
+***_ 启动cache_loader子进程
+****_ 关闭父进程启动时监听的接口
+***_ 启动worker进程
+****_ 调用所有模块init_process方法
+***_ 循环等待信号处理
+****_ SIGCHLD
+*****_ worker退出重新拉起
+****_ SIGTERM
+*****_ 快速推出master进程
+******_ 发送SIGTERM/SIGKILL 给子进程
+****_ SIGHUP
+*****_ 重载配置，从容关闭旧worker，启动新worker
+****_ SIGUSR1
+*****_ 重新打开日志文件
+****_ SIGUSR2
+*****_ 平滑升级可执行程序
+****_ SIGWINCH
+*****_ 从容停止服务，worker退出，master不退出
+****_ SIGQUIT
+*****_ 从容退出worker，master进程
+@endmindmap

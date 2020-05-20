@@ -1,0 +1,22 @@
+@startuml
+:broker通过replicaManager的becomeLeaderOrFollower方法;
+if(controllerEpoch old?) then (true)
+: 返回ErrorMapping.StaleControllerEpochCode的response;
+else
+:对于请求中partitionStateInfos中的每一个元素，即（(topic, partitionId), partitionStateInfo);
+  if(partitionStateInfo中的leader epoch old?) then(true)
+  :返回ErrorMapping.StaleLeaderEpochCode的response ;
+  else
+   if(partitionStateInfo不包含当前的brokerId ?) then (true)
+   :打印log,返回response;
+   else
+   :筛选出partitionState中Leader与当前Broker ID相等的所有记录存入partitionsTobeLeader中，其它记录存入partitionsToBeFollower中;
+   :若partitionsTobeLeader不为空，则对其执行makeLeaders方;
+   :若partitionsToBeFollower不为空，则对其执行makeFollowers方法;
+   :若highwatermak线程还未启动，则将其启动，并将hwThreadInitialized设为true;
+   :关闭所有Idle状态的Fetcher;
+   endif;
+  endif
+endif
+
+@enduml

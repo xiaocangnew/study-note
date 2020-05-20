@@ -1,0 +1,25 @@
+@startmindmap
+*_ 树
+**_ 二叉树
+*** 二叉搜索树
+**** 普通二叉搜索树
+**** 平衡二叉搜索树
+***** AVL树
+***** 红黑树
+**_ 多路树
+*** 多路搜索树
+**** 普通多路搜索树
+**** 平衡二叉搜索树
+***** B树
+***** B+树
+
+legend right
+<&flag> done
+<&globe> ok
+<&graph> graph
+<&pulse> pulse
+<&people> people
+<s> done </s>
+[#FFBBA] blue
+endlegend
+@endmindmap

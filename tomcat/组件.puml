@@ -1,0 +1,14 @@
+@startmindmap
+* tomcatServer
+** 一个或多个service组件
+*** 一个或多个 connector(不同 Connector 负责接收不同端口上相应协议的请求)
+*** 一个engine( 负责处理请求)
+**** 一个或多个logger
+**** 一个或多个value
+**** 一个或多个realm
+**** 一个或多个host(一个host代表一个虚拟主机)
+***** 一个或多个context(一个 Context 组件代表在隶属 Host 上运行的一个 Web 应用)
+****** 一个或多个logger
+****** 一个或多个value
+****** 一个或多个realm
+@endmindmap

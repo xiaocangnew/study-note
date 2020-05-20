@@ -1,0 +1,15 @@
+@startmindmap
+* worker初始化流程
+** ngx_set_enviroment设置环境变量
+** setPriority设置继承优先级
+** setLimit设置进程资源限制
+** geteuid/seteuid设置执行权限
+** ngx_setaffinity绑定进程到cpu核心
+** chdir 改变当前工作目录
+** init_process 初始化所有模块
+***_ ngx_event_process_init 初始化事件模块
+***_ ngx_event_timer_init 初始化定时器红黑树
+** ngx_add_channel_event 注册一个读事件处理函数
+***_ ngx_get_connection 在连接池中分配并初始化连接
+***_ ngx_add_event 关联事件
+@endmindmap
