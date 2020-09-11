@@ -1,25 +1,30 @@
 ### 标签
-``````
-<!-- 本地仓库的路径。默认值为 -->
+
+### 仓库
+1。在repositories标签里，Maven程序会先去本地仓库中找，如果没找到就回去私服找，如果还是没有，最后就回去中央仓库找。
+2。在mirrors标签里，配置仓库的镜像地址。如果仓库找不到，就去镜像仓库里找。
+3。在profiles标签里，是多个环境的配置。可以选择激活一个
+
+
+### 本地仓库的路径
     <localRepository>/opt/repository</localRepository>
 
-<!--Maven是否需要和用户交互以获得输入。默认为true(可以交互)。-->
+### 是否需要和用户交互以获得输入。默认为true
     <interactiveMode>true</interactiveMode>
 
-<!--Maven是否需要使用plugin-registry.xml文件来管理插件版本。如果需要让Maven使用文件来管理插件版本，则设为true。默认为false。-->
+### 是否需要使用plugin-registry.xml文件来管理插件版本
     <usePluginRegistry>false</usePluginRegistry>
 
-<!--表示Maven是否需要在离线模式下运行。如果构建系统需要在离线模式下运行，则为true，默认为false。当由于网络设置原因或者安全因素，构建服务器不能连接远程仓库的时候，该配置就十分有用。 -->
+###是否需要在离线模式下运行。当由于网络设置原因或者安全因素，构建服务器不能连接远程仓库的时
     <offline>false</offline>
 
-<!--当插件的组织Id（groupId）没有显式提供时，供搜寻插件组织Id（groupId）的列表。该元素包含一个pluginGroup元素列表，每个子元素包含了一个组织Id（groupId）。
-当我们使用某个插件，并且没有在命令行为其提供组织Id（groupId）的时候，Maven就会使用该列表。默认情况下该列表包含了org.apache.maven.plugins和org.codehaus.mojo -->
+### 当使用某个插件，但groupId没有显式提供时，供搜寻插件组织Id（groupId）的列表。
     <pluginGroups>
       <pluginGroup>org.apache.maven.plugins</pluginGroup>
       <pluginGroup>org.codehaus.mojo</pluginGroup>
     </pluginGroups>
 
-<!--配置服务端的一些设置。一些设置如安全证书不应该和pom.xml一起分发。这种类型的信息应该存在于构建服务器上的settings.xml文件中。-->
+### 配置服务端的一些设置。一些设置如安全证书不应该和pom.xml一起分发。这种类型的信息应该存在于构建服务器上的settings.xml文件中
     <servers>
       <!--服务器元素包含配置服务器时需要的信息 -->
       <server>
@@ -35,7 +40,7 @@
       </server>
     </servers>
 
-<!--远程仓库列表，它是Maven用来填充构建系统本地仓库所使用的一组远程项目。 -->
+### 远程仓库列表，它是Maven用来填充构建系统本地仓库所使用的一组远程项目。
     <repositories>
       <repository>
          <id>codehausSnapshots</id>
@@ -53,8 +58,7 @@
       </repository>
     </repositories>
 
-<!--为仓库列表配置的下载镜像列表。我们可以在pom中定义一个下载工件的时候所使用的远程仓库。
-但是有时候这个远程仓库会比较忙，所以这个时候人们就想着给它创建镜像以缓解远程仓库的压力，也就是说会把对远程仓库的请求转换到对其镜像地址的请求 -->
+### 为仓库列表配置的下载镜像列表，加速下载
     <mirrors>
       <!--给定仓库的下载镜像。 -->
       <mirror>
@@ -66,9 +70,11 @@
       </mirror>
     </mirrors>
 
-<!--自动触发profile的条件逻辑。activation元素并不是激活profile的唯一方式。settings.xml文件中的activeProfile元素可以包含profile的id。profile也可以通过在命令行，使用-P标记和逗号分隔的列表来显式的激活（如，-P test）。-->
+### 自动触发profile的条件逻辑。
+1. settings.xml文件中的activeProfile元素可以包含profile的id。
+2. profile也可以通过在命令行，使用-P标记和逗号分隔的列表来显式的激活（如，-P test）。-->
+
     <activation>
-    <!--profile默认是否激活的标识-->
         <activeByDefault>false</activeByDefault>
         <jdk>1.5</jdk>
         <os>
@@ -89,7 +95,7 @@
         </file>
      </activation>
 
-<!--手动激活profiles的列表，按照profile被应用的顺序定义activeProfile。 该元素包含了一组activeProfile元素，每个activeProfile都含有一个profile id。-->
+### 手动激活profiles的列表，按照profile被应用的顺序定义activeProfile。
      <activeProfiles>
         <activeProfile>env-test</activeProfile>
      </activeProfiles>
@@ -110,4 +116,3 @@
             </properties>
         </profile>
      </profiles>
-``````

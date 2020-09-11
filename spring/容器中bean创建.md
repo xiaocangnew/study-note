@@ -20,7 +20,7 @@
 > 2. 调用BeanNameAware.setBeanName() ----> BeanFactoryAware.setBeanFactory()
 > 3. 初始化：调用BeanPostProcessor；postProcessBeforeInitialization() -----> InitializingBean.afterPropertySet() ,inital-method() ----> postProcessAfterInitialization()
  
-### beanFactoryPostProcessor && BeanPostProcessor
+### beanFactoryPostProcessor VS BeanPostProcessor
 -beanFactoryPostProcessor是在读取到BeanDefinition之后， instance(实例化)之前进行的，可以修改bean定义的数据，
 -BeanPostProcessor， 初始化前后进行的
 

@@ -1,11 +1,11 @@
-### 1. zcs.spring-boot-starter-parent（控制版本信息）
+### 1. spring-boot-starter-parent（控制版本信息）
 Spring Boot的版本仲裁中心，控制了所有依赖的版本号，
 好处：以后我们导入依赖默认是不需要写版本；
-### 2.zcs.spring-boot-starter
+### 2.spring-boot-starter
     Spring Boot的核心启动器，包含了自动配置、日志和YAML
-### 3. zcs.spring-boot-starter-web
+### 3. spring-boot-starter-web
 web的场景，自动帮我们引入了web模块开发需要的相关jar包
-### 4. zcs.spring-boot-starter-test
+### 4. spring-boot-starter-test
 springboot程序测试依赖，如果是自动创建项目默认添加
 
 

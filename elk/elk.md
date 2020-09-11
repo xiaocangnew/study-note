@@ -8,7 +8,7 @@ Index（索引）
 一个索引可以有多个shards（分片），默认5个。
 Shards
 数据存储的基本单位。
-Replicas
+Replicas 
 Shards的备份称为Replicas。
  
 集群状态
