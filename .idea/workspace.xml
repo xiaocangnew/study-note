@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/design-model/RX响应式编程.md" line="49" mnemonic="3" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,158 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92fbb621-a5cf-4d64-a71a-64b630882cdd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-model/DDD领域驱动设计.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-model/REST编程.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-model/接口设计原则.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/design-model/编程思想.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/distribute-theory/zookeeper对比raft/选举流程.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/distribute-theory/分布式理论.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/distribute-theory/分布式锁.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/distribute-theory/分库分表.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/distribute-theory/容器化/k8s.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/distribute-theory/容灾方案.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/distribute-theory/负载均衡.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-socket/路由.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/线程.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka/kafka常见题目.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysql/分区表.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/netty/百万推送.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/mark-word.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/store_service.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/user_login.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq/rabbitmq题目.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring/面试题目.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tomcat/原理.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/中间件.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/基础工具学习/linux/linux命令.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/大数据/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/大数据/中位数.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/大数据/出现最多的数.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/大数据/总结.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/大数据/海量数据排名.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/操作系统/问题记录.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/系统设计/停车场系统.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/系统设计/微信二维码登录原理.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/系统设计/微博架构设计.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/系统设计/抢红包系统.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/系统设计/排队系统.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/系统设计/点餐系统.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/系统设计/爬虫系统设计.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/系统设计/登录系统.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/系统设计/秒杀系统.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/系统设计/视频上传流程.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/系统设计/高并发设计.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/面试.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/学习.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/学习.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithm/排序算法比较.md" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/排序算法比较.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithm/树结构/B+树和红黑树.md" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/树结构/B+树和红黑树.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithm/树结构/树分类.puml" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/树结构/树分类.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithm/环形数组.md" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/环形数组.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithm/算法.md" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/算法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cas_login/单点登录原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/cas_login/单点登录原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cas_login/工作时序图.puml" beforeDir="false" afterPath="$PROJECT_DIR$/cas_login/工作时序图.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrent/concurrentHashMap.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design-model/设计模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/design-model/设计模式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/hystrix.md" beforeDir="false" afterPath="$PROJECT_DIR$/distribute-theory/hystrix.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/kafka选举/leaderAndISRRequest流程.puml" beforeDir="false" afterPath="$PROJECT_DIR$/distribute-theory/kafka选举/leaderAndISRRequest流程.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/kafka选举/分区leader选举流程.puml" beforeDir="false" afterPath="$PROJECT_DIR$/distribute-theory/kafka选举/分区leader选举流程.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/kafka选举/选举.md" beforeDir="false" afterPath="$PROJECT_DIR$/distribute-theory/kafka选举/选举.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/nginx/Nginx.md" beforeDir="false" afterPath="$PROJECT_DIR$/distribute-theory/nginx/Nginx.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/nginx/http请求流程.puml" beforeDir="false" afterPath="$PROJECT_DIR$/distribute-theory/nginx/http请求流程.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/nginx/master初始化流程.puml" beforeDir="false" afterPath="$PROJECT_DIR$/distribute-theory/nginx/master初始化流程.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/nginx/upstream流程.puml" beforeDir="false" afterPath="$PROJECT_DIR$/distribute-theory/nginx/upstream流程.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/nginx/woker初始化.puml" beforeDir="false" afterPath="$PROJECT_DIR$/distribute-theory/nginx/woker初始化.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/zookeeper对比raft/zookeeper选举.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/分布式.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/分布式事务.md" beforeDir="false" afterPath="$PROJECT_DIR$/distribute-theory/分布式事务.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/大流量设计.md" beforeDir="false" afterPath="$PROJECT_DIR$/distribute-theory/大流量设计.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/微服务.md" beforeDir="false" afterPath="$PROJECT_DIR$/distribute-theory/微服务.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/初识.md" beforeDir="false" afterPath="$PROJECT_DIR$/distribute-theory/容器化/docker.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo/入门.md" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo/入门.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo/源码分析.md" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo/源码分析.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo/问题坑.md" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo/问题坑.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elk/elk.md" beforeDir="false" afterPath="$PROJECT_DIR$/elk/elk.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guava/cache.md" beforeDir="false" afterPath="$PROJECT_DIR$/guava/cache.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guava/get方法流程图.puml" beforeDir="false" afterPath="$PROJECT_DIR$/guava/get方法流程图.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guava/内部组件.puml" beforeDir="false" afterPath="$PROJECT_DIR$/guava/内部组件.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guava/类继承.puml" beforeDir="false" afterPath="$PROJECT_DIR$/guava/类继承.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-socket/cdn.md" beforeDir="false" afterPath="$PROJECT_DIR$/http-socket/cdn.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-socket/http.md" beforeDir="false" afterPath="$PROJECT_DIR$/http-socket/http.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-socket/httpClient.md" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/高效学习方法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-socket/socket.md" beforeDir="false" afterPath="$PROJECT_DIR$/http-socket/socket.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-socket/抓包工具.md" beforeDir="false" afterPath="$PROJECT_DIR$/http-socket/抓包工具.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/java.md" beforeDir="false" afterPath="$PROJECT_DIR$/java/java.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jvm/jvm.md" beforeDir="false" afterPath="$PROJECT_DIR$/jvm/jvm.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jvm/问题排查.md" beforeDir="false" afterPath="$PROJECT_DIR$/jvm/问题排查.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka/原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/kafka/原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka/基础知识.md" beforeDir="false" afterPath="$PROJECT_DIR$/kafka/基础知识.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka/常见题目.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka/控制命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/kafka/控制命令.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lock-thread/对象在内存中布局.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lock-thread/线程.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lock-thread/锁.md" beforeDir="false" afterPath="$PROJECT_DIR$/java/锁.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lock-thread/锁升级过程.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_frame/logback日志.md" beforeDir="false" afterPath="$PROJECT_DIR$/log_frame/logback日志.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maven/mavn学习.md" beforeDir="false" afterPath="$PROJECT_DIR$/maven/mavn学习.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maven/settings文件详解.md" beforeDir="false" afterPath="$PROJECT_DIR$/maven/settings文件详解.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatis.puml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis/mybatis.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/常见问题.md" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis/常见问题.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/源码-动态代理.md" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis/源码-动态代理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/mysql.md" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/mysql.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/基础.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netty/原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/netty/原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package/常用注解.md" beforeDir="false" afterPath="$PROJECT_DIR$/package/常用注解.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/语法.md" beforeDir="false" afterPath="$PROJECT_DIR$/python/语法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq/原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq/运维命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/运维命令.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq/题目.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redis/基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/redis/基础.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redis/踩过的坑.md" beforeDir="false" afterPath="$PROJECT_DIR$/redis/踩过的坑.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redis/问题答案.md" beforeDir="false" afterPath="$PROJECT_DIR$/redis/redis问题答案.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/endpoint.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/spring-databinder.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/spring-maven.md" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring-maven.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/spring-事务.md" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring-事务.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/spring随笔.md" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring随笔.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/事务.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/多语言.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/容器中bean创建.md" beforeDir="false" afterPath="$PROJECT_DIR$/spring/容器中bean创建.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/容器启动顺序.md" beforeDir="false" afterPath="$PROJECT_DIR$/spring/容器启动顺序.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/自动配置.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/请求处理流程.md" beforeDir="false" afterPath="$PROJECT_DIR$/spring/请求处理流程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/组件.puml" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat/组件.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zookeeper/zookeeper.md" beforeDir="false" afterPath="$PROJECT_DIR$/zookeeper/zookeeper.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zookeeper/对比.md" beforeDir="false" afterPath="$PROJECT_DIR$/zookeeper/对比.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zookeeper/工作协议.md" beforeDir="false" afterPath="$PROJECT_DIR$/zookeeper/工作协议.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务完成情况.md" beforeDir="false" afterPath="$PROJECT_DIR$/任务完成情况.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/git/git操作原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/git/git操作原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/linux/vim操作快捷键.md" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/linux/vim操作快捷键.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/md-word/语法.md" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/md-word/语法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/plantUml/arrowAndColor.puml" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/plantUml/arrowAndColor.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/plantUml/basic.puml" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/plantUml/basic.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/plantUml/classAndInterface.puml" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/plantUml/classAndInterface.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/plantUml/sequence.puml" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/plantUml/sequence.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/plantUml/umlRelationship.puml" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/plantUml/umlRelationship.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/plantUml/基础标记.puml" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/plantUml/基础标记.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/plantUml/文档.md" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/plantUml/文档.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/plantUml/泳道图.puml" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/plantUml/泳道图.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/写文档/技术分享文档.md" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/写文档/技术分享文档.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/写文档/需求文档.md" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/写文档/需求文档.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/手机抓包工具使用/charles.md" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/手机抓包工具使用/charles.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/工作项目心得/项目.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作项目心得/项目.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/日常记录随笔/日常随笔.md" beforeDir="false" afterPath="$PROJECT_DIR$/日常记录随笔/日常随笔.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/日常记录随笔/问题记录.md" beforeDir="false" afterPath="$PROJECT_DIR$/http-socket/tcp问题记录.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/股票/基础知识.md" beforeDir="false" afterPath="$PROJECT_DIR$/股票/基础知识.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/股票/新的.md" beforeDir="false" afterPath="$PROJECT_DIR$/股票/新的.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/股票/时讯.md" beforeDir="false" afterPath="$PROJECT_DIR$/股票/时讯.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/面试题目.md" beforeDir="false" afterPath="$PROJECT_DIR$/面试题目.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/技术栈-职业发展目标.md" beforeDir="false" afterPath="$PROJECT_DIR$/技术栈-职业发展目标.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,84 +37,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysql/基础.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="446" column="33" selection-start-line="446" selection-start-column="33" selection-end-line="446" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/面试.md">
+        <entry file="file://$PROJECT_DIR$/技术栈-职业发展目标.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="237" column="51" selection-start-line="237" selection-start-column="51" selection-end-line="237" selection-end-column="51" />
+            <state relative-caret-position="230">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/distribute-theory/分布式锁.md">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/面试题目.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="241" selection-start-line="241" selection-end-line="241" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring/容器中bean创建.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-462">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring/面试题目.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java/锁.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java/java.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3563" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java/线程.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="78" column="10" selection-start-line="78" selection-start-column="10" selection-end-line="78" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zookeeper/zookeeper.md">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -290,6 +72,11 @@
       <find>git re</find>
       <find>跨域</find>
       <find>单例</find>
+      <find>北</find>
+      <find>老虎证券</find>
+      <find>张仓胜</find>
+      <find>k8s</find>
+      <find>d</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -298,20 +85,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/distribute-theory/容器化/docker.md" />
-        <option value="$PROJECT_DIR$/基础工具学习/linux/linux命令.md" />
-        <option value="$PROJECT_DIR$/大数据/海量数据排名.md" />
-        <option value="$PROJECT_DIR$/大数据/topK问题.md" />
-        <option value="$PROJECT_DIR$/netty/百万推送.md" />
-        <option value="$PROJECT_DIR$/lock-thread/锁.md" />
-        <option value="$PROJECT_DIR$/maven/mavn学习.md" />
-        <option value="$PROJECT_DIR$/maven/settings文件详解.md" />
-        <option value="$PROJECT_DIR$/distribute-theory/容灾方案.md" />
-        <option value="$PROJECT_DIR$/系统设计/高并发设计.md" />
-        <option value="$PROJECT_DIR$/redis/问题答案.md" />
-        <option value="$PROJECT_DIR$/中间件.md" />
         <option value="$PROJECT_DIR$/distribute-theory/分布式事务.md" />
-        <option value="$PROJECT_DIR$/mysql/mysql.md" />
         <option value="$PROJECT_DIR$/大数据/Demo.java" />
         <option value="$PROJECT_DIR$/大数据/中位数.md" />
         <option value="$PROJECT_DIR$/大数据/大数据基础.md" />
@@ -334,8 +108,6 @@
         <option value="$PROJECT_DIR$/zookeeper/zookeeper.md" />
         <option value="$PROJECT_DIR$/zookeeper/工作协议.md" />
         <option value="$PROJECT_DIR$/distribute-theory/zookeeper对比raft/选举流程.md" />
-        <option value="$PROJECT_DIR$/redis/redis问题答案.md" />
-        <option value="$PROJECT_DIR$/kafka/基础知识.md" />
         <option value="$PROJECT_DIR$/大数据/出现最多的数.md" />
         <option value="$PROJECT_DIR$/java/java.md" />
         <option value="$PROJECT_DIR$/操作系统/问题记录.md" />
@@ -345,15 +117,31 @@
         <option value="$PROJECT_DIR$/mysql/基础.md" />
         <option value="$PROJECT_DIR$/mybatis/常见问题.md" />
         <option value="$PROJECT_DIR$/面试题目.md" />
-        <option value="$PROJECT_DIR$/java/线程.md" />
         <option value="$PROJECT_DIR$/jvm/jvm.md" />
         <option value="$PROJECT_DIR$/java/锁.md" />
+        <option value="$PROJECT_DIR$/redis/redis问题答案.md" />
+        <option value="$PROJECT_DIR$/distribute-theory/容器化/docker.md" />
+        <option value="$PROJECT_DIR$/kafka/基础知识.md" />
+        <option value="$PROJECT_DIR$/design-model/流式处理系统.md" />
+        <option value="$PROJECT_DIR$/design-model/DDD领域驱动设计.md" />
         <option value="$PROJECT_DIR$/面试.md" />
+        <option value="$PROJECT_DIR$/design-model/函数式编程.md" />
+        <option value="$PROJECT_DIR$/design-model/反应式编程.md" />
+        <option value="$PROJECT_DIR$/design-model/actor模式.md" />
+        <option value="$PROJECT_DIR$/design-model/RX响应式编程.md" />
+        <option value="$PROJECT_DIR$/java/线程.md" />
+        <option value="$PROJECT_DIR$/design-model/中台业务定义.md" />
+        <option value="$PROJECT_DIR$/mysql/mysql.md" />
+        <option value="$PROJECT_DIR$/技术栈.md" />
+        <option value="$PROJECT_DIR$/任务完成情况.md" />
+        <option value="$PROJECT_DIR$/面试经验.md" />
+        <option value="$PROJECT_DIR$/技术栈-职业发展目标.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="1440" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="726" />
+    <option name="width" value="714" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectId" id="1bYiZNuLmYktC6Ajcq2AvuHdoNY" />
@@ -393,6 +181,12 @@
               <item name="study-note" type="462c0819:PsiDirectoryNode" />
               <item name="distribute-theory" type="462c0819:PsiDirectoryNode" />
               <item name="zookeeper对比raft" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study-note" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study-note" type="462c0819:PsiDirectoryNode" />
+              <item name="distribute-theory" type="462c0819:PsiDirectoryNode" />
+              <item name="容器化" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study-note" type="b2602c69:ProjectViewProjectNode" />
@@ -474,11 +268,6 @@
               <item name="study-note" type="462c0819:PsiDirectoryNode" />
               <item name="日常记录随笔" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="study-note" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study-note" type="462c0819:PsiDirectoryNode" />
-              <item name="系统设计" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -496,7 +285,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1599357879943" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600358400143" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -507,16 +296,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/picture" />
+      <recent name="$PROJECT_DIR$/http-socket" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/java" />
       <recent name="D:\idea\study-note\distribute-theory\容器化" />
       <recent name="D:\idea\study-note\distribute-theory\kafka选举" />
       <recent name="D:\idea\study-note\distribute-theory\nginx" />
       <recent name="D:\idea\study-note\algorithm\树结构" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/picture" />
-      <recent name="$PROJECT_DIR$/http-socket" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -573,12 +362,12 @@
       <workItem from="1598150165162" duration="46923000" />
       <workItem from="1598572372222" duration="28503000" />
       <workItem from="1599379108274" duration="8985000" />
-      <workItem from="1599445836806" duration="14000000" />
+      <workItem from="1599445836806" duration="33525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244209000" />
+    <option name="totallyTimeSpent" value="263734000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -700,26 +489,6 @@
     <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591006641050" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spring/spring-事务.md" />
-    <entry file="file://$PROJECT_DIR$/spring/spring随笔.md" />
-    <entry file="file://$PROJECT_DIR$/spring/容器启动顺序.md" />
-    <entry file="file://$PROJECT_DIR$/mysql/mysql.md" />
-    <entry file="file://$PROJECT_DIR$/系统设计/停车场系统.md" />
-    <entry file="file://$PROJECT_DIR$/系统设计/微信二维码登录原理.md" />
-    <entry file="file://$PROJECT_DIR$/系统设计/微博架构设计.md" />
-    <entry file="file://$PROJECT_DIR$/系统设计/排队系统.md" />
-    <entry file="file://$PROJECT_DIR$/系统设计/点餐系统.md" />
-    <entry file="file://$PROJECT_DIR$/系统设计/爬虫系统设计.md" />
-    <entry file="file://$PROJECT_DIR$/系统设计/登录系统.md" />
-    <entry file="file://$PROJECT_DIR$/系统设计/秒杀系统.md" />
-    <entry file="file://$PROJECT_DIR$/系统设计/高并发设计.md" />
-    <entry file="file://$PROJECT_DIR$/系统设计/视频上传流程.md" />
-    <entry file="file://$PROJECT_DIR$/中间件.md" />
-    <entry file="file://$PROJECT_DIR$/任务完成情况.md" />
-    <entry file="file://$PROJECT_DIR$/kafka/kafka常见题目.md" />
-    <entry file="file://$PROJECT_DIR$/kafka/基础知识.md" />
-    <entry file="file://$PROJECT_DIR$/design-model/REST编程.md" />
-    <entry file="file://$PROJECT_DIR$/design-model/DDD领域驱动设计.md" />
     <entry file="file://$PROJECT_DIR$/redis/踩过的坑.md" />
     <entry file="file://$PROJECT_DIR$/jvm/问题排查.md" />
     <entry file="file://$PROJECT_DIR$/大数据/Demo.java">
@@ -746,9 +515,6 @@
     <entry file="file://$PROJECT_DIR$/distribute-theory/zookeeper对比raft/选举流程.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/redis/redis问题答案.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/zookeeper/zookeeper.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -773,24 +539,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/面试题目.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="241" selection-start-line="241" selection-end-line="241" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_212.jdk/Contents/Home/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
           <caret line="89" column="47" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design-model/设计模式.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-444">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
         </state>
       </provider>
     </entry>
@@ -815,13 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring/面试题目.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/distribute-theory/分布式锁.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -830,10 +575,170 @@
         <state relative-caret-position="-3563" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/redis/redis问题答案.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring/面试题目.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/picture/user_login.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/picture/mark-word.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http-socket/cdn.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/distribute-theory/容器化/docker.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-333">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kafka/kafka常见题目.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2997">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kafka/原理.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2146">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kafka/基础知识.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/distribute-theory/容器化/k8s.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design-model/编程思想.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design-model/RX响应式编程.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design-model/函数式编程.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="36" column="6" lean-forward="true" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design-model/流式处理系统.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design-model/设计模式.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2231">
+          <caret line="97" column="13" lean-forward="true" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/distribute-theory/微服务.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/mysql.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="208" column="22" selection-start-line="208" selection-start-column="22" selection-end-line="208" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/中间件.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1387">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/任务完成情况.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/技术面试题目.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="243" selection-start-line="243" selection-end-line="243" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/面试经验.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3749">
+          <caret line="163" column="9" selection-start-line="163" selection-start-column="9" selection-end-line="163" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design-model/中台业务定义.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design-model/actor模式.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design-model/DDD领域驱动设计.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/java/线程.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="78" column="10" selection-start-line="78" selection-start-column="10" selection-end-line="78" selection-end-column="10" />
+        <state relative-caret-position="158">
+          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -844,10 +749,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/面试.md">
+    <entry file="file://$PROJECT_DIR$/技术栈-职业发展目标.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="237" column="51" selection-start-line="237" selection-start-column="51" selection-end-line="237" selection-end-column="51" />
+        <state relative-caret-position="230">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>

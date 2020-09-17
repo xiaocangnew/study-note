@@ -204,4 +204,9 @@ undo log和binlog的区别
 update T set c=c+1 where ID=2;
 按照上面的redo log和组提交相关知识，可以解决了。
 
+### select * from T where A and B, [a和b都有索引，怎么选择](https://www.cnblogs.com/zx125/p/11749860.html)
+1.直接force index直接强制指定查询使用的索引
+2.analyze table zx重新计算预估的扫描行
+3.引导sql的索引选择，比如order by
+4.合理设置索引
 
