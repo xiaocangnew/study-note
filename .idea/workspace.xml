@@ -20,102 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92fbb621-a5cf-4d64-a71a-64b630882cdd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/java应用/spring/注解.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/mybatis-plugin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_shell/shell.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_shell/定时访问.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/中间件/rpcVSmq.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/基础工具学习/excel功能.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/基础工具学习/linux/日志查看.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/大数据/flink/基础.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/系统设计/电梯调度算法.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/工作项目心得/滴滴工作新得.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cas_login/工作时序图.puml" beforeDir="false" afterPath="$PROJECT_DIR$/cas_login/工作时序图.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/hystrix.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/hystrix.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/kafka选举/leaderAndISRRequest流程.puml" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/kafka选举/leaderAndISRRequest流程.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/kafka选举/分区leader选举流程.puml" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/kafka选举/分区leader选举流程.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/kafka选举/选举.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/kafka选举/选举.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/nginx/Nginx.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/nginx/Nginx.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/nginx/http请求流程.puml" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/nginx/http请求流程.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/nginx/master初始化流程.puml" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/nginx/master初始化流程.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/nginx/upstream流程.puml" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/nginx/upstream流程.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/nginx/woker初始化.puml" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/nginx/woker初始化.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/zookeeper对比raft/选举流程.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/zookeeper对比raft/选举流程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/分布式事务.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/分布式事务.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/分布式理论.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/分布式理论.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/分布式锁.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/分布式锁.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/分库分表.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/分库分表.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/大流量设计.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/大流量设计.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/容器化/docker.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/容器化/docker.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/容器化/k8s.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/容器化/k8s.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/容灾方案.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/容灾方案.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/微服务.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/微服务.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/distribute-theory/负载均衡.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/负载均衡.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo/入门.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/dubbo/入门.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo/源码分析.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/dubbo/源码分析.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo/问题坑.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/dubbo/问题坑.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elk/elk.md" beforeDir="false" afterPath="$PROJECT_DIR$/大数据/elk/elk.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guava/cache.md" beforeDir="false" afterPath="$PROJECT_DIR$/java基础/guava/cache.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guava/get方法流程图.puml" beforeDir="false" afterPath="$PROJECT_DIR$/java基础/guava/get方法流程图.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guava/内部组件.puml" beforeDir="false" afterPath="$PROJECT_DIR$/java基础/guava/内部组件.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guava/类继承.puml" beforeDir="false" afterPath="$PROJECT_DIR$/java基础/guava/类继承.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-socket/cdn.md" beforeDir="false" afterPath="$PROJECT_DIR$/网络/http-socket/cdn.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-socket/http.md" beforeDir="false" afterPath="$PROJECT_DIR$/网络/http-socket/http.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-socket/socket.md" beforeDir="false" afterPath="$PROJECT_DIR$/网络/http-socket/socket.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-socket/tcp问题记录.md" beforeDir="false" afterPath="$PROJECT_DIR$/网络/http-socket/tcp问题记录.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-socket/抓包工具.md" beforeDir="false" afterPath="$PROJECT_DIR$/网络/http-socket/抓包工具.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-socket/路由.md" beforeDir="false" afterPath="$PROJECT_DIR$/网络/http-socket/路由.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/java.md" beforeDir="false" afterPath="$PROJECT_DIR$/java基础/java/java.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/线程.md" beforeDir="false" afterPath="$PROJECT_DIR$/java基础/java/线程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/锁.md" beforeDir="false" afterPath="$PROJECT_DIR$/java基础/java/锁.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jvm/jvm.md" beforeDir="false" afterPath="$PROJECT_DIR$/java基础/jvm/jvm.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jvm/问题排查.md" beforeDir="false" afterPath="$PROJECT_DIR$/java基础/jvm/问题排查.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka/kafka常见题目.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/kafka/kafka常见题目.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka/原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/kafka/原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka/基础知识.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/kafka/基础知识.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka/控制命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/kafka/控制命令.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_frame/logback日志.md" beforeDir="false" afterPath="$PROJECT_DIR$/java应用/log_frame/logback日志.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatis.puml" beforeDir="false" afterPath="$PROJECT_DIR$/java应用/mybatis/mybatis.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/常见问题.md" beforeDir="false" afterPath="$PROJECT_DIR$/java应用/mybatis/常见问题.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/源码-动态代理.md" beforeDir="false" afterPath="$PROJECT_DIR$/java应用/mybatis/源码-动态代理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/mysql.md" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/mysql/mysql.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/分区表.md" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/mysql/分区表.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/mysql/基础.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netty/原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/网络/netty/原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netty/百万推送.md" beforeDir="false" afterPath="$PROJECT_DIR$/网络/netty/百万推送.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package/常用注解.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/语法.md" beforeDir="false" afterPath="$PROJECT_DIR$/python_shell/语法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq/rabbitmq题目.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/rabbitmq/rabbitmq题目.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq/原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/rabbitmq/原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq/运维命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/rabbitmq/运维命令.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redis/redis问题答案.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/redis/redis问题答案.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redis/基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/redis/基础.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redis/踩过的坑.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/redis/踩过的坑.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/spring-maven.md" beforeDir="false" afterPath="$PROJECT_DIR$/java应用/spring/spring-maven.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/spring-事务.md" beforeDir="false" afterPath="$PROJECT_DIR$/java应用/spring/spring-事务.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/spring随笔.md" beforeDir="false" afterPath="$PROJECT_DIR$/java应用/spring/spring随笔.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/容器中bean创建.md" beforeDir="false" afterPath="$PROJECT_DIR$/java应用/spring/容器中bean创建.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/容器启动顺序.md" beforeDir="false" afterPath="$PROJECT_DIR$/java应用/spring/容器启动顺序.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/请求处理流程.md" beforeDir="false" afterPath="$PROJECT_DIR$/java应用/spring/请求处理流程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/面试题目.md" beforeDir="false" afterPath="$PROJECT_DIR$/java应用/spring/面试题目.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/java应用/tomcat/原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat/组件.puml" beforeDir="false" afterPath="$PROJECT_DIR$/java应用/tomcat/组件.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zookeeper/zookeeper.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/zookeeper/zookeeper.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zookeeper/对比.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/zookeeper/对比.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zookeeper/工作协议.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/zookeeper/工作协议.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/linux/linux命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/linux/linux命令.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/大数据/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/大数据/中位数.md" beforeDir="false" afterPath="$PROJECT_DIR$/系统设计/中位数.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/大数据/出现最多的数.md" beforeDir="false" afterPath="$PROJECT_DIR$/系统设计/出现最多的数.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/大数据/总结.md" beforeDir="false" afterPath="$PROJECT_DIR$/系统设计/总结.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/大数据/海量数据排名.md" beforeDir="false" afterPath="$PROJECT_DIR$/系统设计/海量数据排名.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/工作项目心得/项目.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作项目心得/项目.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/技术栈-职业发展目标.md" beforeDir="false" afterPath="$PROJECT_DIR$/面试/技术栈-职业发展目标.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/技术面试题目.md" beforeDir="false" afterPath="$PROJECT_DIR$/面试/技术面试题目.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/股票/基础知识.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/股票/新的.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/股票/时讯.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/面试经验.md" beforeDir="false" afterPath="$PROJECT_DIR$/面试/面试经验.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据库/mysql/基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/mysql/基础.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/日常记录随笔/日常随笔.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作项目心得/日常随笔.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/网络/http-socket/模拟服务器.md" beforeDir="false" afterPath="$PROJECT_DIR$/网络/http-socket/模拟服务器.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,23 +76,24 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/大数据" />
-      <recent name="$PROJECT_DIR$/系统设计" />
-      <recent name="$PROJECT_DIR$/java应用" />
-      <recent name="$PROJECT_DIR$/中间件" />
-      <recent name="$PROJECT_DIR$/面试" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/picture" />
       <recent name="$PROJECT_DIR$/cas_login" />
       <recent name="$PROJECT_DIR$/http-socket" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/工作项目心得" />
+      <recent name="$PROJECT_DIR$/大数据" />
+      <recent name="$PROJECT_DIR$/系统设计" />
+      <recent name="$PROJECT_DIR$/java应用" />
+      <recent name="$PROJECT_DIR$/中间件" />
     </key>
   </component>
   <component name="RunManager">
@@ -259,6 +170,16 @@
       <workItem from="1604546248895" duration="26000" />
       <workItem from="1604547330531" duration="221000" />
       <workItem from="1604548464440" duration="138000" />
+      <workItem from="1604576412109" duration="736000" />
+      <workItem from="1604594841071" duration="308000" />
+      <workItem from="1604652166506" duration="75000" />
+      <workItem from="1604655976269" duration="502000" />
+      <workItem from="1604736374746" duration="703000" />
+      <workItem from="1604742157835" duration="301000" />
+      <workItem from="1605691326438" duration="1012000" />
+      <workItem from="1605707063062" duration="335000" />
+      <workItem from="1605861316302" duration="499000" />
+      <workItem from="1606198801216" duration="392000" />
     </task>
     <servers />
   </component>
@@ -292,14 +213,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="562" y="0" width="568" height="900" key="find.popup" timestamp="1604511140063">
+    <state x="562" y="0" width="574" height="900" key="find.popup" timestamp="1605861323064">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="562" y="0" width="568" height="900" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1604511140063" />
-    <state x="404" y="4" width="788" height="896" key="search.everywhere.popup" timestamp="1602689621616">
+    <state x="562" y="0" width="574" height="900" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1605861323064" />
+    <state x="404" y="4" width="788" height="896" key="search.everywhere.popup" timestamp="1605861318442">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="404" y="4" width="788" height="896" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1602689621616" />
+    <state x="404" y="4" width="788" height="896" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1605861318442" />
   </component>
   <component name="masterDetails">
     <states>
