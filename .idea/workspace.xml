@@ -20,12 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92fbb621-a5cf-4d64-a71a-64b630882cdd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/工作项目心得/滴滴工作新得.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/工作项目心得/项目.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作项目心得/项目.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/数据库/mysql/基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/mysql/基础.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/日常记录随笔/日常随笔.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作项目心得/日常随笔.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/网络/http-socket/模拟服务器.md" beforeDir="false" afterPath="$PROJECT_DIR$/网络/http-socket/模拟服务器.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/工作项目心得/滴滴工作新得.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作项目心得/滴滴工作新得.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +175,8 @@
       <workItem from="1605691326438" duration="1012000" />
       <workItem from="1605707063062" duration="335000" />
       <workItem from="1605861316302" duration="499000" />
-      <workItem from="1606198801216" duration="392000" />
+      <workItem from="1606198801216" duration="470000" />
+      <workItem from="1606304439978" duration="923000" />
     </task>
     <servers />
   </component>
