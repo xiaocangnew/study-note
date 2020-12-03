@@ -43,3 +43,12 @@ screen -d -r yourname -> 结束当前session并回到yourname这个session
         curl  -d "age=12&sex=1" http://localhost:8080/ge
    2.参数在body
         curl -H "Content-Type:application/json" -X POST --data '{"startTime":"2019-11-25 10:00:00", "endTime":"2020-05-30 10:00:00"}' http://127.0.0.1:8082/test
+   
+   3. 多header：
+        curl --request POST 'http://10.96.93.151:8388/base/api/group/leader/info' \
+        --header 'appid: wujie_mid' \
+        --header 'ticket: F9ipCl0vbepuSOzjHW2+z0Ub+LQAmuM7KuZMxGUjiSw=' \
+        --header 'Content-Type: application/json' \
+        --data-binary '{
+            "uids": [639264856623032064]
+        }'

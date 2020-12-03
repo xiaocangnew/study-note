@@ -20,19 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92fbb621-a5cf-4d64-a71a-64b630882cdd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/java基础/jvm/gceasy.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/ddl_online.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/工作项目心得/工作数据.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/picture/MySQL_Cluster.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/picture/trade_stable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/中间件/redis/集群.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/中间件/稳定性/稳定性.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/工作项目心得/redis锁问题.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/数据库/mysql/dbproxy.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/数据库/mysql/强一致性数据库.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java基础/jvm/问题排查.md" beforeDir="false" afterPath="$PROJECT_DIR$/java基础/jvm/问题排查.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/中间件/distribute-theory/分布式锁.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/分布式锁.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/中间件/distribute-theory/分库分表.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/分库分表.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务完成情况.md" beforeDir="false" afterPath="$PROJECT_DIR$/任务完成情况.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/中间件/distribute-theory/分布式事务.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/分布式事务.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/基础工具学习/linux/linux命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/linux/linux命令.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/工作项目心得/工作数据.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作项目心得/工作数据.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/工作项目心得/滴滴工作新得.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作项目心得/滴滴工作新得.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/工作项目心得/项目.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作项目心得/项目.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/操作系统/问题记录.md" beforeDir="false" afterPath="$PROJECT_DIR$/操作系统/问题记录.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/数据库/mysql/基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/mysql/基础.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/微博架构设计.md" beforeDir="false" afterPath="$PROJECT_DIR$/系统设计/微博架构设计.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据库/mysql/mysql.md" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/mysql/mysql.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,11 +52,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="726" />
-    <option name="width" value="714" />
-    <option name="height" value="900" />
   </component>
   <component name="ProjectId" id="1bYiZNuLmYktC6Ajcq2AvuHdoNY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -190,7 +185,9 @@
       <workItem from="1606304439978" duration="1416000" />
       <workItem from="1606445208040" duration="7210000" />
       <workItem from="1606668448403" duration="87000" />
-      <workItem from="1606703774735" duration="7839000" />
+      <workItem from="1606703774735" duration="21878000" />
+      <workItem from="1606983595381" duration="482000" />
+      <workItem from="1606984969439" duration="339000" />
     </task>
     <servers />
   </component>
@@ -224,14 +221,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="562" y="0" width="574" height="900" key="find.popup" timestamp="1606728846197">
+    <state x="562" y="0" width="574" height="900" key="find.popup" timestamp="1606806550575">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="562" y="0" width="574" height="900" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1606728846197" />
-    <state x="404" y="4" width="788" height="896" key="search.everywhere.popup" timestamp="1605861318442">
+    <state x="562" y="0" width="574" height="900" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1606806550575" />
+    <state x="404" y="4" width="788" height="896" key="search.everywhere.popup" timestamp="1606804671078">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="404" y="4" width="788" height="896" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1605861318442" />
+    <state x="404" y="4" width="788" height="896" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1606804671078" />
   </component>
   <component name="masterDetails">
     <states>

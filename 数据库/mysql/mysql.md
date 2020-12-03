@@ -29,17 +29,22 @@
         2. 无损半同步，只要有一个slave进行ack就可以了。
        
 - 保证复制过程中数据一致性及减少数据同步延时
-   * MySQL5.5 以及之前
+   1. MySQL5.5 以及之前
       一直采用的是异步复制的方式。主库的事务执行不会管备库的同步进度，如果备库落后，主库不幸crash，那么就会导致数据丢失
-   * 同步复制 VS 半同步复制
+   2. 同步复制 VS 半同步复制
        同步所有的slave都要commit之后事务才会成功。
        半同步指只有一个slave进行commit后就成功。
-   * MySQL 5.6
+   3. MySQL 5.6
       - GTID复制 (Global Transaction ID)，
-         GTID复制不像传统的复制方式（异步复制、半同步复制）需要找到binlog和POSITION点，只需要知道master的IP、端口、账号、密码即可。因为复制是自动的，MySQL会通过内部机制GTID自动找点同步。
+         GTID复制不像传统的复制方式（异步复制、半同步复制）需要找到binlog和POSITION点，只需要知道master的IP、端口、账号、密码即可。
+         因为复制是自动的，MySQL会通过内部机制GTID自动找点同步。
+           - 优缺点：
+               1. 可以在集群全局范围标识事务，用于取代过去通过binlog文件偏移量定位复制位置的传统方式。
+               2. 借助GTID，在发生主备切换的情况下，MySQL的其它Slave可以自动在新主上找到正确的复制位置,简化了复杂复制拓扑下集群的维护，减少了人为设置复制位置发生误操作的风险。
+               3. 基于GTID的复制可以忽略已经执行过的事务,减少了数据发生不一致的风险。
       - 半同步复制， after_commit模式
-         * master在应答客户端提交的事务前：1.commit事务但是不返回客户端成功；2.master收到至少一个slave的ack; 3返回客户端ok；
-         * slave只有在接收到某一个事务的所有Binlog，将其写入并Flush到Relay Log文件之后，才会通知master进行ack。
+         * master在应答客户端提交的事务前：1.commit事务但是不返回客户端成功；2.master收到至少一个slave的ack、; 3返回客户端ok；
+         * slave写入到Relay Log文件之后，就会通知master进行ack。
          * 如果master在等待slave的ack信号超时时，那么master会自动转换为异步复制，当至少一个slave点赶上来时，master便会自动转换为半同步方式的复制。
          * 半同步复制必须是在master和slave两端都开启时才行，否则master都会使用异步方式复制。
       - 缺点：
@@ -47,15 +52,35 @@
          2. 由于master是在三段提交的最后commit阶段完成后才等待，所以master的其他session是可以看到这个提交事务的，
             因此，如果在等待Slave ACK的时候crash了，那么会对其他事务出现幻读，数据丢失。
          3. master crash后，slave数据丢失。
-   * MySQL 5.7 无损半同步复制，
-     引入参数rpl_semi_sync_master_wait_point，默认after_sync，指的是master事务不提交，而是接收到slave的ACK确认之后才提交该事务，复制真正可以做到无损的了。
+   4. MySQL 5.7 无损半同步复制，
+     引入参数rpl_semi_sync_master_wait_point，默认after_sync，指的是master事务不提交，而是接收到slave的(保存relay-log，然后返回ack)ACK确认之后才提交该事务，复制真正可以做到无损的了。
      - 无损复制可能导致master还没commit，在slave收到后还没ack，master就挂了，此时slave数据> master数据，无碍，因为不丢失数据；
      - 无损复制情况下，master意外宕机，重启后发现有binlog没传到slave上面，这部分binlog怎么办，按道理这部分binlog无效
      - 优点：数据零丢失 性能好
        缺点：
-       1. 会阻塞master session，非常依赖网络。
-       2. 由于master是在三段提交的第二阶段sync binlog完成后才等待, 所以master的其他session是看不见这个提交事务的，
-          所以这时候master 上的数据和slave 一致，master crash 后，slave 没有丢失数据
+         1. ack数量可配，为了性能考虑，一般单机房配置ack = 1，以保证至少有一个从库收到最新的数据，但这样无法做到单机房容灾；
+            于是，又发展出了分组半同步（每个机房的副本分为一个组，组内只需回复1个ack即可），以保证各个机房至少有一个从库持有最新的数据
+         2. 主库在发送binlog时，不同的sync binlog时机将可能导致数据不一致（sync_binlog参数）
+         3. sync_binlog > 1，主库依次flush binlog，update binlog position，send binlog events to slave，sync binlog
+            sync_binlog = 1，主库依次flush binlog，sync binlog，update binlog position，send binlog events to slave
+         4. 从库接收到binlog后，是否能及时将relay log及时落盘，也可能导致数据不一致（sync_relay_log != 1）
+         5. 在超时后，会退化为异步复制，仍然存在脑裂问题
+         6. 从库异常时，主库已写入binlog的无法回滚，在主库重启后会多数据
+   5. MySQL 5.7 MGR(MySQL Group Replication)组复制
+       - MGR集群中每个MYSQL Server都有完整的副本，它是基于ROW格式的二进制日志文件和 GTID 特性
+       - MGR集群是多个MySQL Server节点共同组成的分布式集群，使用paxos协议, 多数接受即成功，成功后更新relay-log，应用到 binlog，完成数据的同步
+          (数据是有延迟的，但很小,但性能好)
+       - 特点：
+            MGR 是基于 Paxos 协议和原生复制的分布式集群，大多数节点同意即可以通过议题的模式，数据一致性高。
+            具备高可用、自动故障检测功能，可自动切换。
+            可弹性扩展，集群自动的新增和移除节点，集群最多接入 9 个节点。
+            有单主和多主模式。支持多节点写入，具备冲突检测机制，可以适应多种应用场景需求。
+            行级别并行复制，多线程复制，保证slave与master同步很快；
+       - MGR实现了flow control限流措施，作用就是协调各个节点，保证所有节点执行事务的速度大于队列增长速度，从而避免丢失事务。
+            实现原理：整个Group Replication集群中，同时只有一个节点可以广播消息（数据），每个节点都会获得广播消息的机会（获得机会后也可以不广播），
+                     当慢节点的待执行队列超过一定长度后，它会广播一个FC_PAUSE消息，所以节点收到消息后都会暂缓广播消息并不提供写操作，
+                     直到该慢节点的待执行队列长度减小到一定长度后，Group Replication数据同步又开始恢复。
+       
 - 复制延时 基本是ms级别  
    - 5.5 是单线程复制，
    - 5.6 是多库复制（对于单库或者单表的并发操作是没用的）， 
