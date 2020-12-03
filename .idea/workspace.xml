@@ -19,21 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92fbb621-a5cf-4d64-a71a-64b630882cdd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/picture/MySQL_Cluster.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/picture/trade_stable.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/中间件/redis/集群.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/中间件/稳定性/稳定性.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/工作项目心得/redis锁问题.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/数据库/mysql/dbproxy.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/数据库/mysql/强一致性数据库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/中间件/distribute-theory/分布式事务.md" beforeDir="false" afterPath="$PROJECT_DIR$/中间件/distribute-theory/分布式事务.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础工具学习/linux/linux命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/基础工具学习/linux/linux命令.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/工作项目心得/工作数据.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作项目心得/工作数据.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/工作项目心得/滴滴工作新得.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作项目心得/滴滴工作新得.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/数据库/mysql/mysql.md" beforeDir="false" afterPath="$PROJECT_DIR$/数据库/mysql/mysql.md" afterDir="false" />
-    </list>
+    <list default="true" id="92fbb621-a5cf-4d64-a71a-64b630882cdd" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,7 +173,7 @@
       <workItem from="1606668448403" duration="87000" />
       <workItem from="1606703774735" duration="21878000" />
       <workItem from="1606983595381" duration="482000" />
-      <workItem from="1606984969439" duration="339000" />
+      <workItem from="1606984969439" duration="407000" />
     </task>
     <servers />
   </component>
