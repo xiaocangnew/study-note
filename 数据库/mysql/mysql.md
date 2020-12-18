@@ -11,11 +11,92 @@
   
 ### [经典面试题](https://www.cnblogs.com/panwenbin-logs/p/8366940.html)
 
+### [MySQL事务两阶段提交(解决binlog与redo-log的一致性与协同问题)](https://sq.163yun.com/blog/article/165554812476866560)
+- 两阶段流程通用流程
+   1. 准备阶段
+         1.协调者记录事务开始日志
+         2.协调者向所有参与者发送prepare消息，询问是否可以执行事务提交，并等待参与者响应
+         3.参与者收到prepare消息后，根据自身情况，进行事务预处理，执行询问发起为止的所有事务操作
+             3.1 如果能够提交该事务，将undo信息和redo信息写入日志，进入预提交状态
+             3.2 如果不能提交该事务，撤销所做的变更，并记录日志
+             3.3 参与者响应协调者发起的询问。如果事务预处理成功返回commit，否者返回abort。
+             准备阶段只保留了最后一步耗时短暂的正式提交操作给第二阶段执行。
+   2. 提交阶段
+         1.协调者等待所有参与者准备阶段的反馈
+         1.1失败
+             如果收到某个参与者发来的abort消息或者迟迟未收到某个参与者发来的消息
+             标识该事务不能提交，协调者记录abort日志
+             向所有参与者发送abort消息，让所有参与者撤销准备阶段的预处理
+         1.2成功
+             如果协调者收到所有参与者发来的commit消息
+             标识着该事务可以提交，协调者记录commit日志
+             向所有参与者发送commit消息，让所有参与者提交事务
+         2.参与者等待协调者的指令
+         2.1如果参与者收到的是abort消息
+            中止事务，利用之前写入的undo日志执行回滚，释放准备阶段锁定的资源
+            记录abort日志
+            向协调者发送rollback done消息
+         2.2如果参与者收到的是commit消息
+            提交事务，释放准备阶段锁定的资源
+            记录commit日志
+            向协调者发送commit done消息
+            协调者等待所有参与者提交阶段的反馈
+         3.如果协调者收到所有参与者发来的commit done消息
+           完成事务，记录事务完成日志
+         3.1如果协调者收到所有参与者发来的rollback done消息
+            取消事务，记录事务取消日志
+
+
+- mysql 的两阶段提交
+1. 在开启binlog后，binlog会被当做事务协调者，binlog event会被当做协调者日志，MySQL内部会自动将普通事务当做一个XA事务来处理。
+2. 事务参与者InnoDB引擎来执行prepare，commit或者rollback。
+3. MySQL对binlog做了优化,prepare不写binlog日志，commit才写日志
+4. 事务提交的整个过程如下：
+     1. 准备阶段
+         通知InnoDB prepare：更改事务状态，将undo、redo log落盘
+     2. 提交阶段
+         记录协调者日志(binlog日志)，并通过fsync()永久落盘
+         通知InnoDB commit
+5. 内部XA异常恢复
+     1.准备阶段redo log落盘前宕机
+          InnoDB中还没prepare，binlog中也没有该事务的events。通知InnoDB回滚事务
+     2.准备阶段redo log落盘后宕机(binlog落盘前)
+          InnoDB中是prepared状态，binlog中没有该事务的events。通知InnoDB回滚事务
+     3.提交阶段binlog落盘后宕机
+          InnoDB中是prepared状态，binlog中有该事务的events。通知InnoDB提交事务
+
+### 组提交（多个并发需要提交的事务共享一次fsync操作来进行数据的持久化)
+- 在没有开启binlog时，Redo log的刷盘操作将会是最终影响MySQL TPS的瓶颈所在。
+    MySQL使用了redo-log组提交，将多个刷盘操作合并成一个
+- 在开启binlog时，增加了binlog的组提交，分为三个阶段(Flush 阶段、Sync 阶段、Commit 阶段)完成事务
+       1. Flush阶段 (作用是提供了Redo log的组提交)
+              1. 首先获取队列中的事务组
+              2. 将Redo log中prepare阶段的数据刷盘
+              3. 将binlog数据写入文件(其实是os buffer）
+              4. 这一步完成后数据库崩溃，由于没有bin log，所以MySQL可能会在重启后回滚该组事务
+       2. Sync阶段(作用是支持binlog的组提交)
+              binlog_group_commit_sync_delay=N：在等待N μs后，开始事务刷盘
+              binlog_group_commit_sync_no_delay_count=N
+       3. commit阶段(作用是完成最后的引擎提交，使得Sync可以尽早的处理下一组事务，最大化组提交的效率)
+            Commit阶段不用刷盘，Flush阶段中的Redo log刷盘已经足够保证数据库崩溃时的数据安全了
+- 在MySQL中每个阶段都有一个队列，每个队列都有一把锁保护，第一个进入队列的事务会成为leader，
+   leader领导所在队列的所有事务，全权负责整队的操作，完成后通知队内其他事务操作结束。
+
+### 一条更新语句执行的顺序
+update T set c=c+1 where ID=2;
+按照上面的redo log和组提交相关知识，可以解决了。
+
+### select * from T where A and B, [a和b都有索引，怎么选择](https://www.cnblogs.com/zx125/p/11749860.html)
+1.直接force index直接强制指定查询使用的索引
+2.analyze table zx重新计算预估的扫描行
+3.引导sql的索引选择，比如order by
+4.合理设置索引
+
 - 增量复制
    主从同步是增量同步，通过binlog进行；原有数据需要mysqldump先把数据dump出来，导入到slave中去。
    不停机的开启主从同步，可以尝试在mysqldump添加--master-data的参数，这样导入从库之后会自动设置binlog的位点。
 
-- 推 VS 拉 
+- 推 VS 拉 (类似命令广播)
   master主动推送新变化到slave上(减少slave的负担)。
 
 - 主从复制的过程：binlog->relaylog
@@ -66,7 +147,7 @@
          4. 从库接收到binlog后，是否能及时将relay log及时落盘，也可能导致数据不一致（sync_relay_log != 1）
          5. 在超时后，会退化为异步复制，仍然存在脑裂问题
          6. 从库异常时，主库已写入binlog的无法回滚，在主库重启后会多数据
-   5. MySQL 5.7 MGR(MySQL Group Replication)组复制
+   5. [MySQL 5.7 MGR(MySQL Group Replication)组复制](https://database.51cto.com/art/202004/615706.htm)
        - MGR集群中每个MYSQL Server都有完整的副本，它是基于ROW格式的二进制日志文件和 GTID 特性
        - MGR集群是多个MySQL Server节点共同组成的分布式集群，使用paxos协议, 多数接受即成功，成功后更新relay-log，应用到 binlog，完成数据的同步
           (数据是有延迟的，但很小,但性能好)
@@ -135,6 +216,14 @@
 - redo log 是重做日志，提供“前滚”操作；undo log是回退日志，提供“回滚”操作。
 
 - Undo Log的原理(保证事务的原子性和持久性，MVCC保证)
+* 0. undo log是逻辑日志(可以认为当delete一条记录时，会记录一条对应的insert记录，反之亦然）
+     redo log记录物理日志(记录的是数据页的物理修改，而不是某一行或某几行修改成怎样怎样)
+     undo log也会产生redo log，因为undo log也要实现持久性保护。
+          * 3.1 MVCC 需要。
+              事务提交前会覆盖写的db，都需要存储被覆盖的旧值供“读已提交”事务隔离时使用
+          * 3.2 crash recovery
+              对于未提交的事务需要把被覆盖的旧值还原为新值所以旧值需要落盘。
+              考虑到恢复需要逻辑线性序，所以需要把旧值组织成log。
 * 1.事务的原子性(Atomicity)
    事务中的所有操作，要么全部完成，要么不做任何操作，不能只做部分操作。
 如果在执行的过程中发生了错误，要回滚(Rollback)到事务开始前的状态，就像这个事务从来没有执行过。
@@ -155,19 +244,11 @@
    * 2.2 
       前提条件：数据都是先读到内存中，然后修改内存中的数据，最后将数据写回磁盘。
       缺陷：每个事务提交前将数据和Undo-Log写入磁盘，这样会导致两次磁盘IO，因此性能很低。
-* 3. undo log也需要落磁盘
-   * 3.1 MVCC 需要。
-       事务提交前会覆盖写的db，都需要存储被覆盖的旧值供“读已提交”事务隔离时使用
-   * 3.2 crash recovery
-       对于未提交的事务需要把被覆盖的旧值还原为新值所以旧值需要落盘。
-       考虑到恢复需要逻辑线性序，所以需要把旧值组织成log。
 
 - Redo Log的原理(保证事务的持久性)
 * 1. 在事务提交前，只要将Redo Log持久化即可，不需要将数据持久化。当系统崩溃时，虽然数据没有持久化，但是Redo Log已经持久化。
    系统可以根据 Redo Log的内容，将所有数据恢复到最新的状态。
-* 2. redo log 通常是物理日志，记录的是数据页的物理修改，而不是某一行或某几行修改成怎样怎样，
-   它用来恢复提交后的物理数据页(恢复数据页，且只能恢复到最后一次提交的位置)。
-* 3. Undo + Redo事务的简化过程
+* 2. Undo + Redo事务的简化过程
   A.事务开始.
   B.记录A=1到undo log. C.修改A=3. D.记录A=3到redo log. 
   E.记录B=2到undo log. F.修改B=4. G.记录B=4到redo log.
@@ -195,43 +276,3 @@ undo log和binlog的区别
   0：默认值。事务提交后，将二进制日志从缓冲写入磁盘，但是不进行刷新操作（fsync()），此时只是写入了操作系统缓冲，若操作系统宕机则会丢失部分二进制日志。
   1：事务提交后，将二进制文件写入磁盘并立即执行刷新操作，相当于是同步写入磁盘，不经过操作系统的缓存。
   N：每写N次操作系统缓冲就执行一次刷新操作。
-  
-### 两阶段提交(解决binlog与redo-log的一致性与协同问题)
-- 两阶段流程
-    Prepare阶段：innodb刷redo-log，并将回滚段设置为Prepared状态，binlog不作任何操作；
-    commit阶段：innodb释放锁，释放回滚段，设置提交状态，binlog刷binlog日志。
-- 以binlog的写入与否作为事务是否成功的标记，innodb引擎的redo commit标记并不是这个事务成功与否的标记
-    1. binlog有记录时提交
-           redolog状态commit：正常完成的事务，不需要恢复
-           redolog状态prepare：在binlog写完提交事务之前的crash，恢复操作：提交事务
-    2. binlog无记录时回滚
-           redolog状态prepare：在binlog写完之前的crash，恢复操作：回滚事务
-           redolog无记录：在redolog写之前crash，恢复操作：回滚事务
-
-### 组提交（多个并发需要提交的事务共享一次fsync操作来进行数据的持久化)
-- 在没有开启binlog时，Redo log的刷盘操作将会是最终影响MySQL TPS的瓶颈所在。
-    MySQL使用了redo-log组提交，将多个刷盘操作合并成一个
-- 在开启binlog时，增加了binlog的组提交，分为三个阶段(Flush 阶段、Sync 阶段、Commit 阶段)完成事务
-       1. Flush阶段 (作用是提供了Redo log的组提交)
-              1. 首先获取队列中的事务组
-              2. 将Redo log中prepare阶段的数据刷盘
-              3. 将binlog数据写入文件(其实是os buffer）
-              4. 这一步完成后数据库崩溃，由于没有bin log，所以MySQL可能会在重启后回滚该组事务
-       2. Sync阶段(作用是支持binlog的组提交)
-              binlog_group_commit_sync_delay=N：在等待N μs后，开始事务刷盘
-              binlog_group_commit_sync_no_delay_count=N
-       3. commit阶段(作用是完成最后的引擎提交，使得Sync可以尽早的处理下一组事务，最大化组提交的效率)
-            Commit阶段不用刷盘，Flush阶段中的Redo log刷盘已经足够保证数据库崩溃时的数据安全了
-- 在MySQL中每个阶段都有一个队列，每个队列都有一把锁保护，第一个进入队列的事务会成为leader，
-   leader领导所在队列的所有事务，全权负责整队的操作，完成后通知队内其他事务操作结束。
-
-### 一条更新语句执行的顺序
-update T set c=c+1 where ID=2;
-按照上面的redo log和组提交相关知识，可以解决了。
-
-### select * from T where A and B, [a和b都有索引，怎么选择](https://www.cnblogs.com/zx125/p/11749860.html)
-1.直接force index直接强制指定查询使用的索引
-2.analyze table zx重新计算预估的扫描行
-3.引导sql的索引选择，比如order by
-4.合理设置索引
-

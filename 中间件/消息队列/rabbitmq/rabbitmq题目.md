@@ -1,9 +1,4 @@
-### 消息队列的优缺点：
-优点：
-解耦、异步、削峰，水平扩展
-缺点有：
-1.系统可用性降低，依赖mq组件的高可用
-2.系统复杂度提高，比如数据一致性问题、证消息不被重复消费、保证消息可靠性传输等
+
 
 ### 性能调优
 [性能调优](https://www.cnblogs.com/purpleraintear/p/6033136.html)
@@ -65,26 +60,6 @@ A：当你发现自家的 Producers 动辄被挂起或被阻塞时，你要知�
 1.将数据写入磁盘上的一个持久化日志文件，Rabbit会在消息提交到日志文件后才发送响应。
 2.消息消费后在持久化日志中标记为等待垃圾收集。
 3.失败重启后重播持久化日志文件中的消息到合适的队列或者交换器上。
-
-### MQ 的常见问题有：
-- 消息的顺序问题
-   - 1.producer保证发送消息的顺序性：
-       1. channel内发送的消息是保证顺序性的， 自研确保channel与线程绑定。
-       2. 继承AbstractRoutingConnectionFactory， 实现lookupkey方法，每个factory中只用一个channel。
-   - 2.consumer端保证接受消息的顺序性
-       1. 一个queue只用一个consumer消费(防止多消费者时，一个consumer消费失败，又传给别人消费)
-
-- 消息的重复问题
-   - 幂等
-   
-- 如何保证不丢消息
-   - 1.producer引入事务机制或者Confirm机制
-   - 2.消息队列进行消息持久化， 同时引入mirrored-queue镜像队列
-       1.exchange持久化：channel.exchangeDeclare(exchangeName,"direct/topic/header/fanout",true);
-       2.queue持久化：channel.queueDeclare(queueName,true,false,false,null);
-       3.message持久化发送,设置BasicProperties的deliverayMode=2：
-   - 3.consumer不自动ack，处理完成后再ack，
-   - 4.消息补偿机制，发送消息前入库，缺失消息后可以重发；
 
 ## 集群
 ###普通模式-提高吞吐量
@@ -206,18 +181,6 @@ A：当你发现自家的 Producers 动辄被挂起或被阻塞时，你要知�
     2.1 message持久化，但queue未持久化.那么当queue的owner node出现异常后，在未重建该queue前，发往该queue的message将被阻塞；
     2. 2message持久化，但queue也持久化.那么当queue的owner node出现异常后，若无法重启的情况下，则该queue无法在其他node上重建，发消息也会阻塞；
     
-### 消费者出问题
-- 集群队列的磁盘要写满
-- 导致消息过期，丢失了 
-- 1. 大量消息堆积了几个小时的处理办法   
-  - 1. 修复bug(大量积压导致原来consumer消费能力不足，需要扩容)
-  - 2. 临时紧急扩容(需要考虑机器是否存在数据库竞争等情况，临时分发程序是否可以保证正确性，及时性)
-    - 1.1 新建多个queue，将积压的消息轮询写入新建的多个queue中，进行快速消费；
-    - 1.2 等消费完消息后，再去掉临时程序。
-- 2. 堆积的消息要过期了(丢失消息)
-    - 1. producer发消息前要落库，之后进行重发；
-    - 2. 要能够找出丢失的消息，进行重发。
-
 ### 为什么一个普通的方法加上@RabbitListener注解就能接收消息了呢？
 RabbitListenerEndpointRegistry 类是用来管理RabbitListenerEndPoint的，  
 它实现了smartLiftcycle，在应用起来时自动调用container.start();

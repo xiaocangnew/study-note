@@ -4,8 +4,14 @@
    但如果字符串是可变的，如果变量改变了它的值，那么其它指向这个值的变量的值也会一起改变。
 2.为了线程安全： 
    不可变性支持线程安全。同一个字符串实例可以被多个线程共享。这样便不用因为线程安全问题而使用同步
+3. String text="abc" 将"abc"放入常量池中， 然后text指向它；
+4. String text1 = new String("abc"),
+     1.首先在堆中（不是常量池）创建一个指定的对象"abc"，并让str引用指向该对象
+     2.在字符串常量池中查看，是否存在内容为"abc"字符串对象
+     3.若存在，则将new出来的字符串对象与字符串常量池中的对象联系起来
+     4.若不存在，则在字符串常量池中创建一个内容为"abc"的字符串对象，并将堆中的对象与之联系起来
 
-### boolean 字节数
+### boolean字节数
 boolean类型没有给出精确的定义，《Java虚拟机规范》给出了4个字节，和boolean数组1个字节的定义；
 具体还要看虚拟机实现是否按照规范来，所以1个字节、4个字节都是有可能的。这其实是运算效率和存储空间之间的博弈，两者都非常的重要。
 
@@ -129,8 +135,11 @@ threadLocal2.get();
    3. threadLocal就是key，有一个static AtomicInteger()变量， 每次new 一个threadLocal， 就会加1，该变量使用*0x61c88647 
       产生hashcode，使得threadLocal1 和 threadLocal2的hashcode不一样。
 - 内存泄漏：
-   ThreadLocalMap的key是弱引用，即threadLocal是弱引用，在每次gc时会被回收，但此时线程还没结束(例如线程池中的核心线程)，
+   ThreadLocalMap的key是弱引用，即threadLocal是弱引用，在每次gc时，如果threadLocal =null后， 会被回收，但此时线程还没结束(例如线程池中的核心线程)，
    导致value无法被回收，内存泄漏。解决办法：用完后手动回收。
+- threadLocal为什么使用弱引用
+   当创建threadLocal后，会在
+
    
    
    
@@ -267,12 +276,33 @@ putIfAbent()每次都会创建成功，但不一定被存放到Map中，就不�
 
 ### HashMap 的线程不安全
 - 扩容在jdk1.7中会导致死循环
-    扩容过程中使用头插法将oldTable中的单链表中的节点插入到newTable的单链表中，
+    扩容过程中使用头插法将oldTable中的单链表中的节点插入到newTable的单链表中(put时使用的也是头插法，最近经常使用的放在最上面)
     所以newTable中的单链表会倒置oldTable中的单链表。
     那么在多个线程同时扩容的情况下就可能导致扩容后的HashMap中存在一个有环的单链表，
    从而导致后续执行get操作的时候，会触发死循环，引起CPU的100%问题。
 - 在jdk1.8 时可能发生put覆盖；
-   正好hash到同一个位置上，正常会产生链表，但是多线程时直接丢失。
+   1. 正好hash到同一个位置上，正常会产生链表，但是多线程时直接丢失。
+   2. 在扩容时使用尾插法， 不会存在死锁问题；
+
+- [jdk1.7头插法进行扩容实现死锁](https://my.oschina.net/u/4305379/blog/4529330)
+   两个线程都进行扩容， 一个线程扩容完毕后，另一个线程再从中断处开始扩容，会形成环；
+void transfer(Entry[] newTable, boolean rehash) {
+        int newCapacity = newTable.length;
+        for (Entry<K,V> e : table) {
+            while(null != e) {
+            	//1， 获取旧表的下一个元素
+                Entry<K,V> next = e.next; //提前保存e的下一个节点，下面e.next要更改；
+                if (rehash) {
+                    e.hash = null == e.key ? 0 : hash(e.key);
+                }
+                int i = indexFor(e.hash, newCapacity);
+                e.next = newTable[i];  // e的下一个节点为newTable[i]， e为新的头节点；
+                newTable[i] = e;   //把新的头节点放到数组位置上；
+                e = next;     //循环
+            }
+        }
+    }
+
 
 ### hashMap的resize()
 - 1. 什么时候扩容
@@ -290,7 +320,7 @@ putIfAbent()每次都会创建成功，但不一定被存放到Map中，就不�
       2. 找到新数组中的对应位置，以头插法插入新的链表， 链表会逆序。(多线程可能死循环)
     - jdk1.8(性能提升很大)
        1. 经过rehash之后，元素的位置要么是在原位置，要么是在(原位置+oldCap)位置。。
-          因此，在扩容时，不需要重新计算元素的hash了，只需要hash& oldCap，判断最高位是1还是0就好了，0不变，1相加
+          因此，在扩容时，不需要重新计算元素的hash了，只需要hash&(oldCap-1)，判断最高位是1还是0就好了，0不变，1相加
        2. JDK8在迁移元素时是正序的，不会出现链表转置的发生。
 - 5. 在resize过程中put操作，结果未知，多线程不安全
  
