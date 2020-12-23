@@ -386,7 +386,7 @@ key可能会在某些时间点被超高并发地访问，是一种非常“热�
    
 ### 分布式锁
 1. setnx,会有死锁问题，线程在未设置expireTime就异常，则永远无法释放锁；
-2. 使用jedis.set(lockKey, requestId, "NX", "PX", expireTime); // requestId是value，用来保证分布式锁的解铃还须系铃人， nx为不存在时才设置，存在时什么也不做， px设置超时时间
+2. 使用jedis.set(lockKey, requestId, "NX", "PX", expireTime); // requestId是value，全局唯一，用来保证分布式锁的解铃还须系铃人， nx为不存在时才设置，存在时什么也不做， px设置超时时间
 
 ###如果突然机器掉电会怎样？
 取决于aof日志sync属性的配置，如果不要求性能，在每条写指令时都sync一下磁盘，就不会丢失数据。

@@ -47,24 +47,6 @@
             取消事务，记录事务取消日志
 
 
-- mysql 的两阶段提交
-1. 在开启binlog后，binlog会被当做事务协调者，binlog event会被当做协调者日志，MySQL内部会自动将普通事务当做一个XA事务来处理。
-2. 事务参与者InnoDB引擎来执行prepare，commit或者rollback。
-3. MySQL对binlog做了优化,prepare不写binlog日志，commit才写日志
-4. 事务提交的整个过程如下：
-     1. 准备阶段
-         通知InnoDB prepare：更改事务状态，将undo、redo log落盘
-     2. 提交阶段
-         记录协调者日志(binlog日志)，并通过fsync()永久落盘
-         通知InnoDB commit
-5. 内部XA异常恢复
-     1.准备阶段redo log落盘前宕机
-          InnoDB中还没prepare，binlog中也没有该事务的events。通知InnoDB回滚事务
-     2.准备阶段redo log落盘后宕机(binlog落盘前)
-          InnoDB中是prepared状态，binlog中没有该事务的events。通知InnoDB回滚事务
-     3.提交阶段binlog落盘后宕机
-          InnoDB中是prepared状态，binlog中有该事务的events。通知InnoDB提交事务
-
 ### 组提交（多个并发需要提交的事务共享一次fsync操作来进行数据的持久化)
 - 在没有开启binlog时，Redo log的刷盘操作将会是最终影响MySQL TPS的瓶颈所在。
     MySQL使用了redo-log组提交，将多个刷盘操作合并成一个
@@ -147,7 +129,7 @@ update T set c=c+1 where ID=2;
          4. 从库接收到binlog后，是否能及时将relay log及时落盘，也可能导致数据不一致（sync_relay_log != 1）
          5. 在超时后，会退化为异步复制，仍然存在脑裂问题
          6. 从库异常时，主库已写入binlog的无法回滚，在主库重启后会多数据
-   5. [MySQL 5.7 MGR(MySQL Group Replication)组复制](https://database.51cto.com/art/202004/615706.htm)
+   5. MySQL 5.7 组复制MGR [(MySQL Group Replication)](https://database.51cto.com/art/202004/615706.htm)
        - MGR集群中每个MYSQL Server都有完整的副本，它是基于ROW格式的二进制日志文件和 GTID 特性
        - MGR集群是多个MySQL Server节点共同组成的分布式集群，使用paxos协议, 多数接受即成功，成功后更新relay-log，应用到 binlog，完成数据的同步
           (数据是有延迟的，但很小,但性能好)
