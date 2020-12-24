@@ -1,3 +1,10 @@
+### producer动态感知topic分区变化
+1. producer向broker发送消息时，需要指定分区情况。
+2. 如果在Kafka Producer往Kafka的Broker发送消息的时候用户通过命令修改了改主题的分区数，
+     Kafka Producer能动态感知吗？答案是可以的。
+3. 那是立刻就感知到吗？不是，是过一定的时间（topic.metadata.refresh.interval.ms参数决定）
+     才知道分区数改变的
+
 ### Kafka 判断一个节点是否还活着有那两个条件？
 1. 节点必须可以维护和 ZooKeeper 的连接，Zookeeper 通过心跳机制检查每个节点的连接
 2. 如果节点是个follower,他必须能及时的同步leader的写操作，延时不能太久
@@ -6,7 +13,14 @@
 1. zookeeper是一个分布式的协调组件，
 2. 早期版本的kafka用zk做meta信息存储，consumer的消费状态，group的管理以及 offset的值。
 3. 新版本中逐渐弱化了zookeeper的作用。新的consumer使用了kafka内部的group coordination协议，也减少了对zookeeper的依赖，
+     0.8以前的kafka，消费的进度(offset)是写在zk中的，所以consumer需要知道zk的地址
+     0.9 的时候整体大改了一次，brokers接管了消费者组和offset信息，consumer不再需要和zookeeper 通信了
 4. 新版本中broker依然依赖于ZK，zookeeper在kafka中还用来选举controller 和 检测broker是否存活等等。
+      broker controller作用：
+        增加删除topic，
+        更新分区副本数量，
+        选举partition分区leader，
+        集群broker增加和宕机后的调整
 
 ### 如何处理kafka所有Replica都不工作
  - 如果某个Partition的所有Replica都宕机了，就无法保证数据不丢失了。这种情况下有两种可行的方案：
@@ -73,7 +87,7 @@ Kafka有个参数可以让consumer阻塞知道新消息到达(防止brokers没�
 - consumer端
     - BytesPerSec(网络吞吐量)
     - MessagesPerSec(消息消费速度): 正常下应该是稳定的，突然下降可能是因为消费失败
-    - MinFetchRate(消费者拉取的速率)
+    - MinFetchRate(消费·者拉取的速率)
          反映了消费者的整体健康状况,通常都是非0的。如果发现这个值在下降，往往就是消费者失败的标志。
     - ConsumerLag/MaxLag(关键指标)
         ConsumerLag是指consumer当前的日志偏移量相对生产者的日志偏移量，MaxLag是观察到的ConsumerLag的最大值
