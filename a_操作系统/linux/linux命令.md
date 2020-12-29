@@ -52,3 +52,19 @@ screen -d -r yourname -> 结束当前session并回到yourname这个session
         --data-binary '{
             "uids": [639264856623032064]
         }'
+
+### cut 管道命令
+1. -d 分割符， -d " "；
+2. -c 字符， 只要选中位置的字符， -c 14-18，
+3. -f 字段， 只要选中的列字段， -f 1；
+
+
+### awk命令
+ awk -F "," '{ if($1="abc"){print $0}else{print $1} }' access.log
+
+### head命令
+ head -n 5， 默认显示前5行 (head -n -5， 从头到最后5行)
+ tail -n 5， 默认显示最后5行 (tail -n +5, 从第5行到末尾)
+
+### wc命令
+ 统计， -l 统计行数， -w 统计字数， -c 字节数
