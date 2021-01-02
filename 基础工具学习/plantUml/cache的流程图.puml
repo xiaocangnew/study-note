@@ -1,0 +1,44 @@
+@startuml
+title get(key)方法
+
+start
+:步骤1;
+note left: 注解1
+: 步骤2;
+note left: 注解2
+ if(条件判断) then (为true时的注解)
+       : 流程3;
+       partition 子模块1 {
+          if(条件判断) then (为true时的注解)
+            partition 子模块12{
+                :流程4;
+                note left: 流程4注解
+                if(条件判断) then (为true时的注解)
+                   : 流程5;
+                else
+                   partition 子模块123 {
+                                    :流程1;
+                                    :流程2;
+                                    :流程3;
+                                  }
+                endif
+             }
+            partition 子模块13{
+                    :流程1;
+                    :流程2;
+                    :流程3;
+            }
+          else
+            : return oldValue;
+          endif
+       }
+ else
+    : 流程3（valueReference）;
+    note right: 注解3
+       if(valueReference.isLoading()) then (true)
+       : waitForLoadingValue;
+       note right: 阻塞直到返回
+       endif;
+ endif;
+stop
+@enduml
