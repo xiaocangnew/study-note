@@ -1,0 +1,10 @@
+0. command + u : 切换悬浮窗口的透明度；
+1. commond+enter 全屏/半屏切换
+2. commond+. 最小化切换
+3. option+enter. 选中的内容进行复制
+4. commond+d/shift+d， 垂直/水平分屏
+
+ctrl+u 删除当前行
+ctrl+a(ahead) 到行首
+ctrl+e(end) 到行尾
+ctrl + f(forward)/b(backward)  在行中，前进/后退

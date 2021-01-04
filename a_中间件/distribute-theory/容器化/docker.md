@@ -42,8 +42,8 @@ run/start (run是初始化镜像并启动， start直接启动容器)
 - 参数：
     - i 交互式操作
     - t 进入终端， -t tomcat /bash/shell
-    - d 容器在后台启动， 如果要进入容器，使用 docker exec -it pid /bin/bash
-    - P 端口映射 (P是随机映射，p是指定映射 5050：5000)
+    - d 容器在后台启动(damon)， 如果要进入容器，使用 docker exec -it pid /bin/bash
+    - P 端口映射 (大P是随机映射，小p是指定映射 5050：5000)
     - e 环境变量 key value；
     - v 容器外目录 容器内目录
     
