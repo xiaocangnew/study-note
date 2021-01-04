@@ -23,10 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92fbb621-a5cf-4d64-a71a-64b630882cdd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/基础工具学习/term终端工具快捷键" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a_中间件/distribute-theory/容器化/docker部署服务.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_中间件/distribute-theory/容器化/docker.md" beforeDir="false" afterPath="$PROJECT_DIR$/a_中间件/distribute-theory/容器化/docker.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_操作系统/linux/vim操作快捷键.md" beforeDir="false" afterPath="$PROJECT_DIR$/a_操作系统/linux/vim操作快捷键.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,11 +91,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/基础工具学习/term终端工具快捷键">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+              <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/a_中间件/distribute-theory/容器化/docker部署服务.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -142,6 +149,7 @@
       <find>jar``</find>
       <find>docker</find>
       <find>流程图</find>
+      <find>curl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -150,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/面试/线上问题解决.md" />
         <option value="$PROJECT_DIR$/java基础/jvm/问题排查.md" />
         <option value="$PROJECT_DIR$/中间件/redis/基础.md" />
         <option value="$PROJECT_DIR$/中间件/distribute-theory/大流量设计.md" />
@@ -201,6 +208,7 @@
         <option value="$PROJECT_DIR$/a_中间件/distribute-theory/容器化/docker.md" />
         <option value="$PROJECT_DIR$/a_操作系统/linux/vim操作快捷键.md" />
         <option value="$PROJECT_DIR$/基础工具学习/term终端工具快捷键" />
+        <option value="$PROJECT_DIR$/a_中间件/distribute-theory/容器化/docker部署服务.md" />
       </list>
     </option>
   </component>
@@ -239,12 +247,35 @@
             <path>
               <item name="study-note" type="b2602c69:ProjectViewProjectNode" />
               <item name="study-note" type="462c0819:PsiDirectoryNode" />
+              <item name="a_中间件" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study-note" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study-note" type="462c0819:PsiDirectoryNode" />
+              <item name="a_中间件" type="462c0819:PsiDirectoryNode" />
+              <item name="distribute-theory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study-note" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study-note" type="462c0819:PsiDirectoryNode" />
+              <item name="a_中间件" type="462c0819:PsiDirectoryNode" />
+              <item name="distribute-theory" type="462c0819:PsiDirectoryNode" />
+              <item name="容器化" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study-note" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study-note" type="462c0819:PsiDirectoryNode" />
               <item name="cas_login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study-note" type="b2602c69:ProjectViewProjectNode" />
               <item name="study-note" type="462c0819:PsiDirectoryNode" />
               <item name="基础工具学习" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study-note" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study-note" type="462c0819:PsiDirectoryNode" />
+              <item name="大数据" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -264,7 +295,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1609724297570" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1609725349209" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/picture" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -407,7 +438,7 @@
       <workItem from="1609153292800" duration="6929000" />
       <workItem from="1609511569092" duration="8965000" />
       <workItem from="1609598499090" duration="943000" />
-      <workItem from="1609599800949" duration="3695000" />
+      <workItem from="1609599800949" duration="4281000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1609594508574</created>
@@ -420,7 +451,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165872000" />
+    <option name="totallyTimeSpent" value="166458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -545,13 +576,6 @@
     <state x="404" y="4" width="788" height="896" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1606804671078" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/a_中间件/消息队列/rabbitmq/原理.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/a_中间件/消息队列/rabbitmq/运维命令.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -822,7 +846,14 @@
     <entry file="file://$PROJECT_DIR$/基础工具学习/term终端工具快捷键">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a_中间件/distribute-theory/容器化/docker部署服务.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
         </state>
       </provider>
     </entry>
