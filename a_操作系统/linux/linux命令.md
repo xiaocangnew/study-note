@@ -61,6 +61,7 @@ screen -d -r yourname -> 结束当前session并回到yourname这个session
 
 ### awk命令
  awk -F "," '{ if($1="abc"){print $0}else{print $1} }' access.log
+  $0 文件名  $1 第一个field ， NF 一行中所有的fields， NR 文件中所有的rows
 
 ### head命令
  head -n 5， 默认显示前5行 (head -n -5， 从头到最后5行)
@@ -68,3 +69,37 @@ screen -d -r yourname -> 结束当前session并回到yourname这个session
 
 ### wc命令
  统计， -l 统计行数， -w 统计字数， -c 字节数
+
+
+### netstat 命令(linux下， mac可能不管用)
+- netstat 输出结果可以分为两个部分
+      1. Active Internet connections 有源TCP连接。
+            其中"Recv-Q"和"Send-Q"指接收队列和发送队列。这些数字一般都应该是0，如果不是则表示软件包正在队列中堆积。这种情况只能在非常少的情况见到。
+      2. Active UNIX domain sockets 有源Unix域套接口
+            和网络套接字一样，但是只能用于本机通信，性能可以提高一倍。
+- 常用命令
+      1. -l 仅列出有在 Listen (监听) 的服务状态。
+      2. -t (tcp) 仅显示tcp相关选项。 /   -u (udp) 仅显示udp相关选项。
+      3. -a (all) 显示所有选项，默认不显示LISTEN相关。
+      4. -p (program)显示建立相关链接的程序名
+      5. -s 按各个协议进行统计
+      6. -r 核心路由信息
+
+- 实战
+     1. 列出所有端口 #netstat -a
+     2. 列出所有 tcp 端口 #netstat -at     /  udp 端口 #netstat -au
+     4. 只显示监听端口 #netstat -l
+     5. 只列出所有监听 tcp 端口 #netstat -lt   /  udp 端口 #netstat -lu  /  UNIX 端口 #netstat -lx
+     8. 显示所有端口的统计信息 #netstat -s
+     9. 显示TCP统计信息 #netstat -st   / udp端口 #netstat -su
+    10. 输出中显示PID和进程名称 #netstat -p
+    11. 查看tcp各个状态数量：netstat -n | awk '/^tcp/ {++state[$NF]} END {for(key in state) print key,"\t",state[key]}'
+    12. 查看连接某服务端口最多的IP：netstat -na | grep 172.16.70.60:1111 | awk '{print $5}' | cut -d : -f1 | sort  | uniq -c | sort -rn | head -10
+
+### scp命令
+- 常用格式：
+     1. 上传： scp local target:path
+     2. 下载： scp target local
+- 常用参数：
+     1. -P 8080 指定端口  / -p 保留原文件的修改时间，访问时间和访问权限。
+     2.
