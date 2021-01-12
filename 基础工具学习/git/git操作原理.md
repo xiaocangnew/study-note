@@ -111,3 +111,10 @@ git remote update origin -p
 
 ### [rebase](https://baijiahao.baidu.com/s?id=1633418495146592435&wfr=spider&for=pc)
 - git pull --rebase 代替git pull
+
+### git reset –-soft/hard
+有时候，进行了错误的提交，但是还没有push到远程分支，想要撤销本次提交，
+git reset –-soft：
+  回退到某个版本，只回退了commit的信息，不会恢复到index file一级。如果还要提交，直接commit即可；
+git reset -–hard：
+  彻底回退到某个版本，本地的源码也会变为上一个版本的内容，撤销的commit中所包含的更改被冲掉；
