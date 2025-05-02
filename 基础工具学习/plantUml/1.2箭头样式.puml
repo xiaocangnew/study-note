@@ -1,0 +1,20 @@
+@startuml
+Bob -> Alice:2
+Bob <- Alice:3
+Bob ->> Alice:31
+Bob <<- Alice:32
+Bob --> Alice:33
+Bob -->> Alice:34
+Bob <-> Alice:9
+
+Bob ->o Alice:7
+Bob ->x Alice:71
+
+Bob -[#purple]> Alice : 11
+Alice -[#0000FF]->Bob : 12
+
+Bob -\ Alice:4
+Bob \\- Alice:5
+Bob //-- Alice:6
+Bob o\\-- Alice:8
+@enduml

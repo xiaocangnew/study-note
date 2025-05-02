@@ -80,4 +80,5 @@ app2->browser:200 response
 deactivate app2
 browser->user:display source
 deactivate browser
+
 @enduml

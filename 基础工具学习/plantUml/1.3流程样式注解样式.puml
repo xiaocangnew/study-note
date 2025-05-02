@@ -1,0 +1,58 @@
+@startuml
+
+:第一步(以冒号开头，以分号表示一步结尾);
+:第二步
+:第二步2;
+:第三步(除了分号，还有各种结尾方式) <
+:分枝2-2 <
+:分枝2-3 |
+:分枝2-4 ]
+:分枝2-5 /
+note left: 左边注解，note关键字&以冒号结尾，注解的是紧挨着的一行
+:第三步;
+note right: 右边注解
+note left
+   多行注解，不需要冒号结尾，而是endnote
+end note
+
+if(条件判断) then (为true时的注解)
+: 流程5;
+else
+   partition 子模块123 {
+        :流程1;
+        :流程2;
+        :流程3;
+   }
+endif
+
+:步骤5;
+repeat
+:第6步;
+repeat while (循环条件)
+
+:第7步;
+while (循环条件)
+:read data;
+:generate diagrams;
+endwhile
+
+fork
+:多线程处理1;
+fork again
+:多线程处理2;
+end fork
+
+split
+:分枝1-1;
+:分枝1-2;
+split again
+:分支;
+split again
+:分枝3-1 }
+end split
+
+:第8步|
+start
+: start 关键字表示开始，stop表示结束;
+stop
+@enduml

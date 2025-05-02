@@ -1,0 +1,71 @@
+@startuml
+title 时序图示例
+header @author
+footer page  @author
+
+
+skinparam roundcorner 20
+skinparam sequenceParticipant underline
+skinparam LifeLineBackgroundColor #lightYellow
+
+
+hide footbox
+
+
+actor User as user #green
+
+
+box ATM
+control 屏幕 as app #lightBlue
+participant 读卡器 as reader #yellow
+end box
+
+box BANK #lightBlue
+participant service
+entity 短信
+queue   MessageQueue
+database Mysql
+end box
+
+== First Access to app1 ==
+== First Access to app2 ==
+
+activate user
+user->reader #lightBlue:插如银行卡
+activate reader
+reader-> reader:读卡
+activate reader
+deactivate reader
+reader->app:显示屏幕
+deactivate reader
+activate app
+app ->user:提示输入密码
+deactivate app
+user->app:输入密码
+activate app
+app-> service:查询用户
+activate service
+service->Mysql:查询用户
+activate Mysql
+Mysql ->service:resultSet
+deactivate Mysql
+alt 用户存在
+   service ->> MessageQueue:发送登陆ATM消息
+activate MessageQueue
+note over MessageQueue #red:通过消息队列消峰
+   ...30秒延时...
+   MessageQueue ->短信:发送短信
+   activate 短信
+   短信 -->user
+   deactivate 短信
+   deactivate MessageQueue
+   service ->app:服务选项
+   app -> user :提示选择服务
+else 用户不存在
+|||
+   service->app:登陆失败
+   deactivate service
+   app-> user:重新输入密码
+   deactivate app
+end
+@enduml

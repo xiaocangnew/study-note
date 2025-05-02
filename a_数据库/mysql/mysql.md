@@ -153,7 +153,7 @@ update T set c=c+1 where ID=2;
     - 排查方法：show slave status命令输出的Seconds_Behind_Master参数的值来判断：Null为故障；0为没有延时； 正值表示延时时间
               slave_net_timeout 在多少秒没收到主库传来的Binary Logs events之后,slave认为网络超时,Slave IO线程会重新连接主库
     
-- cpu飙到500%，排查问题：
+### cpu飙到500%，排查问题：
   - 先top看是不是mysql导致的，
   - show processlist，执行时间长的线程
       - 显示的信息时来自information_schema.processlist表，所以这个Id就是这个表的主键。
@@ -165,7 +165,21 @@ update T set c=c+1 where ID=2;
       2.truncate 删全表
       3.truncate强制删除，但delete会检查外键约束
       4.truncate不能回滚，为ddl语句，命令不放到日志文件中
-      
+
+### 数据库主从延时， 怎么解决
+1. 表现： 先写后读时(写走主库，读走从库)， 如果有主从延时，导致读不到数据；
+   2.MySQL主从延时通常是由于以下原因造成的：
+- 网络延迟
+    - 优化网络：确保主从服务器之间的网络通信是畅通的，减少网络延迟。
+- 主服务器负载高(如大量的写入操作,导致二进制日志(binlog)生成和传输延迟)
+    - 如果主服务器负载过高，考虑在从服务器上执行一些只读查询，减少主服务器的负载。
+- 大事务处理 (大事务会生成大量的二进制日志，这可能导致从服务器处理这些日志时的延迟。)
+    - 分解大事务：将大事务分解成多个小事务，以减少主从同步的延迟。
+- binlog格式不对，可能会影响复制效率
+    - 调整binlog_format为ROW或MIXED，以减少复制延迟。
+- 并行复制问题：如果配置了并行复制，但配置不当，可能会导致复制延迟。
+    - 启用并行复制，并调整slave_parallel_workers以匹配硬件能力。
+
 ### 主备切换
 使用MySQL+keepalived是一种非常好的解决方案，在MySQL-HA环境中，MySQL互为主从关系，
 这样就保证了两台 MySQL数据的一致性，然后用keepalived实现虚拟IP，
@@ -193,6 +207,11 @@ update T set c=c+1 where ID=2;
         1、SELECT LOCK IN SHARE MODE
         2、SELECT FOR UPDATE
         3、DELETE / UPDATE / INSERT INTO
+
+### MVCC
+- MVCC的实现是通过保存数据在某个时间点的快照。对于同一行数据，可能会有多个版本，每个版本在一段时间内有效。InnoDB使用两个隐藏的列来实现MVCC效果：一个是创建版本号，一个是删除版本号。
+- MVCC可以极大提高数据库的并发处理能力，缓解系统锁的竞争。在不枷锁的情况下，保证被读取到数据的一致性
+- MVCC 的实现依赖于：隐藏字段、Read View、undo log， 
 
 ### redo log和 undo log  [详细参考](https://www.cnblogs.com/vana/p/10254885.html)
 - redo log 是重做日志，提供“前滚”操作；undo log是回退日志，提供“回滚”操作。
