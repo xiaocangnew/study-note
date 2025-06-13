@@ -23,54 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92fbb621-a5cf-4d64-a71a-64b630882cdd" name="Default" comment="提交">
-      <change afterPath="$PROJECT_DIR$/方法论/稳定性方法论.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/方法论/管理能力.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/方法论/职场思考.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/方法论/面试经验.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/架构/架构师.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/架构/系统设计/推荐系统.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/架构/系统设计/支付系统设计.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/架构/系统设计/标签系统.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/架构/系统设计/活动系统.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/架构/系统设计/登录系统.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/架构/系统设计/订单系统设计.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/架构/能力地图.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/稳定性/jvm调优实战.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/稳定性/jvm问题排查.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/稳定性/rpc稳定性建设.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/稳定性/下单稳定性建设.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/稳定性/基础知识.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/架构/架构_设计模式/EDA事件驱动架构.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_数据库/hbase.md" beforeDir="false" afterPath="$PROJECT_DIR$/a_数据库/hbase.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务完成情况.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/工作项目心得/项目.md" beforeDir="false" afterPath="$PROJECT_DIR$/工作项目心得/项目.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/架构_方法论/大流量设计.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/大流量设计.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/架构_方法论/架构图.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/架构图.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/架构_方法论/系统设计思路" beforeDir="false" afterPath="$PROJECT_DIR$/架构/系统设计思路" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/架构_设计模式/DDD领域驱动设计.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/架构_设计模式/DDD领域驱动设计.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/架构_设计模式/REST编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/架构_设计模式/REST编程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/架构_设计模式/RX响应式编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/架构_设计模式/RX响应式编程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/架构_设计模式/actor模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/架构_设计模式/actor模式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/架构_设计模式/中台业务定义.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/架构_设计模式/函数式编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/架构_设计模式/函数式编程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/架构_设计模式/接口设计原则.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/架构_设计模式/接口设计原则.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/架构_设计模式/流式处理系统.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/架构_设计模式/流式处理系统.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/架构_设计模式/设计模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/架构_设计模式/设计模式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/停车场系统.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/系统设计/停车场系统.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/关键词屏蔽算法.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/系统设计/关键词屏蔽算法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/微信二维码登录原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/系统设计/微信二维码登录原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/微博架构设计_权限设计.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/系统设计/微博架构设计_权限设计.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/抢红包系统.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/系统设计/抢红包系统.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/排队系统.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/系统设计/排队系统.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/支付系统设计.md" beforeDir="false" afterPath="$PROJECT_DIR$/方法论/基础能力.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/海量数据排名.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/系统设计/海量数据排名.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/点餐系统.md" beforeDir="false" afterPath="$PROJECT_DIR$/方法论/学习机思考.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/爬虫系统设计.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/系统设计/爬虫系统设计.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/电梯调度算法.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/系统设计/电梯调度算法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/登录系统.md" beforeDir="false" afterPath="$PROJECT_DIR$/方法论/方案调研.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/秒杀系统.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/系统设计/秒杀系统.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/订单系统设计.md" beforeDir="false" afterPath="$PROJECT_DIR$/方法论/架构方法论.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统设计/高并发设计.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/系统设计/高并发设计.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a_数据库/数据库对比.md" beforeDir="false" afterPath="$PROJECT_DIR$/a_数据库/数据库对比.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/方法论/基础能力.md" beforeDir="false" afterPath="$PROJECT_DIR$/方法论/基础能力.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/方法论/职场思考.md" beforeDir="false" afterPath="$PROJECT_DIR$/方法论/职场思考.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构/架构_设计模式/设计模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/架构_设计模式/设计模式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构/系统设计/停车场系统.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
