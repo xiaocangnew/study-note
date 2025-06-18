@@ -23,13 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92fbb621-a5cf-4d64-a71a-64b630882cdd" name="Default" comment="提交">
-      <change afterPath="$PROJECT_DIR$/架构/架构_设计模式/EDA事件驱动架构.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a_数据库/数据库对比.md" beforeDir="false" afterPath="$PROJECT_DIR$/a_数据库/数据库对比.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/方法论/基础能力.md" beforeDir="false" afterPath="$PROJECT_DIR$/方法论/基础能力.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/方法论/职场思考.md" beforeDir="false" afterPath="$PROJECT_DIR$/方法论/职场思考.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/架构/架构_设计模式/设计模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/架构/架构_设计模式/设计模式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/架构/系统设计/停车场系统.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/方法论/稳定性方法论.md" beforeDir="false" afterPath="$PROJECT_DIR$/方法论/稳定性方法论.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/方法论/管理能力.md" beforeDir="false" afterPath="$PROJECT_DIR$/方法论/管理能力.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/方法论/面试经验.md" beforeDir="false" afterPath="$PROJECT_DIR$/方法论/面试经验.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
